@@ -1,1 +1,1 @@
-# pizza-delivery-app-database
+# CS 166 Project
