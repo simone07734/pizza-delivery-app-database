@@ -47,6 +47,13 @@ CREATE TABLE views (
         ON UPDATE CASCADE
 );
 
+CREATE TABLE has(
+    orderID CHAR(60) NOT NULL,
+    itemName CHAR(50) NOT NULL,
+    PRIMARY KEY (orderID, itemName),
+    FOREIGN KEY (itemName) REFERENCES Item
+);
+
 CREATE TABLE OrderPlaced (
     orderID CHAR(60) NOT NULL,
     orderTimestamp TIMESTAMP NOT NULL,
@@ -54,6 +61,12 @@ CREATE TABLE OrderPlaced (
     totalPrice FLOAT NOT NULL,
     login CHAR(15) NOT NULL,
     storeID CHAR(50) NOT NULL,
+    itemName CHAR(50) NOT NULL,
+    --participation constraint
+    CONSTRAINT hasForeignKey 
+        FOREIGN KEY (orderID,itemName)
+        REFERENCES has(orderID, itemName) DEFERRABLE INITIALLY DEFERRED,
+
     PRIMARY KEY (orderID),
     FOREIGN KEY (login) REFERENCES AppUser
         ON DELETE CASCADE
@@ -61,15 +74,11 @@ CREATE TABLE OrderPlaced (
     FOREIGN KEY (storeID) REFERENCES Store
 );
 
-CREATE TABLE has (
-    orderID CHAR(60) NOT NULL,
-    itemName CHAR(50) NOT NULL,
-    PRIMARY KEY (orderID, itemName),
-    FOREIGN KEY (orderID) REFERENCES OrderPlaced
+ALTER TABLE has
+    ADD FOREIGN KEY (orderID) REFERENCES OrderPlaced
         ON DELETE CASCADE
-        ON UPDATE CASCADE,
-    FOREIGN KEY (itemName) REFERENCES Item
-);
+        ON UPDATE CASCADE;
+
 
 CREATE TABLE availableAt (
     itemName CHAR(50) NOT NULL,
