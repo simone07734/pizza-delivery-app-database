@@ -1,0 +1,1001 @@
+storeID,address,city,state,isOpen,reviewScore
+1,83 Hallows Center,San Diego,California,yes,4
+2,92096 Bunker Hill Avenue,Spring,Texas,yes,4
+3,8229 Jenifer Terrace,Portland,Oregon,yes,5
+4,4 Golf Parkway,Portland,Oregon,no,5
+5,8383 Westend Terrace,Omaha,Nebraska,no,5
+6,37131 Miller Terrace,Honolulu,Hawaii,no,5
+7,73424 Straubel Parkway,Charlotte,North Carolina,no,5
+8,65 Service Crossing,Indianapolis,Indiana,yes,4
+9,0 Independence Circle,Sioux Falls,South Dakota,yes,5
+10,04547 School Alley,New York City,New York,yes,4
+11,6 Fordem Court,Alhambra,California,no,4
+12,5 Monterey Junction,Knoxville,Tennessee,no,5
+13,78634 Ludington Terrace,Decatur,Georgia,no,5
+14,4102 Donald Terrace,Spokane,Washington,no,4
+15,7 Debra Trail,Memphis,Tennessee,yes,4
+16,7765 Roxbury Lane,Des Moines,Iowa,no,4
+17,66059 Vera Parkway,Louisville,Kentucky,yes,4
+18,9 Golf View Hill,Aiken,South Carolina,no,4
+19,2 Heath Alley,Topeka,Kansas,yes,5
+20,104 Vernon Plaza,Tucson,Arizona,yes,5
+21,7 Tomscot Circle,Fort Wayne,Indiana,yes,5
+22,617 Katie Hill,Los Angeles,California,no,5
+23,4933 Bay Lane,Vancouver,Washington,yes,5
+24,3 Crowley Plaza,Washington,District of Columbia,no,5
+25,9 Longview Pass,El Paso,Texas,no,4
+26,696 Mayfield Court,Waco,Texas,no,5
+27,8 Burrows Avenue,Boca Raton,Florida,no,5
+28,289 Buell Point,Akron,Ohio,yes,4
+29,58412 Vernon Pass,Baltimore,Maryland,no,5
+30,8 La Follette Lane,Mobile,Alabama,no,5
+31,4 Sugar Park,Lancaster,Pennsylvania,no,4
+32,52772 Schurz Pass,Stamford,Connecticut,yes,4
+33,9604 Tennyson Street,Omaha,Nebraska,no,4
+34,9 Del Sol Drive,Philadelphia,Pennsylvania,yes,4
+35,57244 Oakridge Pass,Simi Valley,California,yes,5
+36,3611 Green Ridge Lane,Atlanta,Georgia,yes,4
+37,57 Fulton Park,Los Angeles,California,no,4
+38,8 Sugar Pass,Irvine,California,yes,4
+39,5702 Express Crossing,Virginia Beach,Virginia,no,5
+40,550 Hintze Hill,Bronx,New York,yes,5
+41,62440 Pankratz Street,Lexington,Kentucky,yes,5
+42,17068 Boyd Point,Tulsa,Oklahoma,no,5
+43,2670 Welch Place,Van Nuys,California,no,5
+44,5330 Roth Parkway,Lancaster,California,yes,4
+45,795 High Crossing Court,Amarillo,Texas,no,5
+46,3676 Maple Street,Huntington Beach,California,no,5
+47,8 Erie Crossing,Saint Petersburg,Florida,no,5
+48,2 Myrtle Place,Fort Worth,Texas,yes,5
+49,2 Vidon Way,Austin,Texas,no,5
+50,3 Raven Way,Louisville,Kentucky,yes,4
+51,66066 Myrtle Court,Nashville,Tennessee,yes,5
+52,075 Welch Street,Dayton,Ohio,no,5
+53,68 Kenwood Junction,Fort Worth,Texas,no,4
+54,5 Carey Alley,Grand Forks,North Dakota,yes,5
+55,4 Barnett Junction,Tuscaloosa,Alabama,no,4
+56,119 Monterey Terrace,Pompano Beach,Florida,no,5
+57,88543 Harbort Center,Pueblo,Colorado,yes,4
+58,1 Sugar Crossing,Richmond,Virginia,yes,4
+59,187 Charing Cross Lane,Saint Paul,Minnesota,yes,5
+60,80 Fuller Road,Charleston,West Virginia,yes,5
+61,4 Sutherland Avenue,Atlanta,Georgia,no,5
+62,95 Grim Hill,Toledo,Ohio,no,4
+63,44388 Norway Maple Parkway,Fort Lauderdale,Florida,no,4
+64,38 Kropf Way,Miami,Florida,yes,5
+65,8 Browning Crossing,Colorado Springs,Colorado,yes,5
+66,453 Steensland Drive,Saint Louis,Missouri,yes,5
+67,140 Granby Circle,Minneapolis,Minnesota,no,5
+68,8 Scott Crossing,Staten Island,New York,yes,5
+69,518 Village Road,Monroe,Louisiana,yes,5
+70,1470 Bayside Park,Nashville,Tennessee,yes,4
+71,51158 Del Sol Circle,Denver,Colorado,no,4
+72,04 Gerald Hill,Roanoke,Virginia,yes,4
+73,184 Spohn Alley,Redwood City,California,no,5
+74,7882 Elka Road,New York City,New York,no,4
+75,9 Fairview Parkway,Huntington,West Virginia,no,5
+76,05599 Maywood Point,Greensboro,North Carolina,no,4
+77,222 Trailsway Point,Bradenton,Florida,yes,4
+78,8 Reinke Alley,Newton,Massachusetts,yes,5
+79,78 Ridgeway Street,Washington,District of Columbia,no,5
+80,0 Atwood Pass,Corpus Christi,Texas,no,4
+81,64469 Stoughton Parkway,Woburn,Massachusetts,no,4
+82,375 Del Sol Terrace,Marietta,Georgia,no,5
+83,33240 Loomis Pass,Lees Summit,Missouri,no,5
+84,6372 Dwight Parkway,Orange,California,yes,5
+85,98650 Dovetail Parkway,Charleston,West Virginia,no,4
+86,6267 Warner Trail,Alexandria,Louisiana,no,5
+87,0791 Red Cloud Pass,Glendale,California,no,4
+88,00721 Shelley Plaza,Seattle,Washington,yes,5
+89,04442 Burrows Avenue,New York City,New York,yes,4
+90,75703 Village Court,Nashville,Tennessee,no,4
+91,573 Paget Park,Kansas City,Missouri,no,4
+92,9531 John Wall Alley,Orlando,Florida,yes,5
+93,001 8th Parkway,Chicago,Illinois,yes,4
+94,1 Texas Plaza,Humble,Texas,yes,5
+95,8 Chinook Avenue,Miami,Florida,yes,5
+96,12 Aberg Pass,Washington,District of Columbia,no,5
+97,90653 Vernon Way,Gaithersburg,Maryland,yes,5
+98,25 Kropf Place,Shawnee Mission,Kansas,yes,4
+99,151 Bunker Hill Drive,Madison,Wisconsin,no,4
+100,0311 Merchant Place,San Francisco,California,yes,4
+101,2698 3rd Trail,Oklahoma City,Oklahoma,yes,4
+102,203 2nd Hill,Hicksville,New York,yes,4
+103,26240 Grim Drive,Anderson,Indiana,yes,4
+104,5742 Eggendart Center,Portland,Oregon,yes,4
+105,26 Southridge Junction,Kansas City,Missouri,no,5
+106,3 Pine View Lane,Wilmington,North Carolina,no,4
+107,800 Fulton Place,Juneau,Alaska,no,5
+108,52686 Boyd Circle,Hayward,California,yes,4
+109,22 Iowa Circle,Birmingham,Alabama,yes,4
+110,9489 Sloan Junction,Spring,Texas,yes,4
+111,884 Bashford Court,San Mateo,California,yes,5
+112,16564 Killdeer Way,Sacramento,California,no,4
+113,7038 Goodland Place,San Antonio,Texas,no,5
+114,6242 Cardinal Circle,Albany,New York,yes,4
+115,752 Darwin Street,New Castle,Pennsylvania,no,5
+116,9457 Delladonna Street,Birmingham,Alabama,yes,5
+117,1 Browning Junction,Atlanta,Georgia,yes,4
+118,66 Karstens Drive,Phoenix,Arizona,no,4
+119,7 Hayes Road,San Antonio,Texas,yes,4
+120,752 Emmet Drive,Salt Lake City,Utah,yes,5
+121,1 4th Circle,Las Vegas,Nevada,no,5
+122,6850 Gerald Way,Dallas,Texas,no,5
+123,4 Schlimgen Crossing,Houston,Texas,yes,4
+124,274 Red Cloud Center,Saint Louis,Missouri,yes,5
+125,69351 Bayside Point,Portland,Oregon,yes,5
+126,43990 Blackbird Plaza,Brooklyn,New York,no,4
+127,1 Rowland Park,Dayton,Ohio,no,4
+128,673 Tony Center,Visalia,California,no,4
+129,16 Florence Street,Schenectady,New York,yes,4
+130,923 Heath Hill,Los Angeles,California,no,5
+131,71 Novick Parkway,Houston,Texas,no,5
+132,740 Manitowish Street,Huntington Beach,California,no,4
+133,334 Union Court,Fort Lauderdale,Florida,no,5
+134,0 Messerschmidt Junction,Helena,Montana,yes,5
+135,94522 Hooker Plaza,Lexington,Kentucky,yes,5
+136,76579 Sutteridge Point,Houston,Texas,no,5
+137,309 Garrison Crossing,Huntington,West Virginia,yes,5
+138,758 Anderson Center,Montgomery,Alabama,no,4
+139,83 Bluestem Center,Seattle,Washington,no,4
+140,7 Grim Pass,Phoenix,Arizona,yes,4
+141,9133 Coolidge Drive,Lincoln,Nebraska,no,5
+142,4 Judy Plaza,Pasadena,Texas,no,4
+143,0 Continental Road,Boulder,Colorado,yes,5
+144,7500 Arkansas Pass,Bronx,New York,yes,4
+145,7 Havey Park,South Bend,Indiana,no,4
+146,24 Kennedy Center,Santa Fe,New Mexico,no,4
+147,6886 Jackson Center,New York City,New York,no,4
+148,2808 Talmadge Plaza,Topeka,Kansas,no,4
+149,42808 Tennessee Circle,Scranton,Pennsylvania,yes,4
+150,0 Fordem Street,Danbury,Connecticut,yes,5
+151,08782 Sutherland Avenue,Monticello,Minnesota,no,4
+152,2 Fallview Crossing,Fresno,California,no,4
+153,09526 Bonner Point,Baton Rouge,Louisiana,no,5
+154,633 Sheridan Street,New Orleans,Louisiana,yes,5
+155,971 Kedzie Junction,El Paso,Texas,yes,4
+156,00 Loeprich Road,Brooklyn,New York,no,4
+157,79 Erie Pass,El Paso,Texas,yes,4
+158,44 Thompson Hill,Pittsburgh,Pennsylvania,yes,5
+159,8 Towne Plaza,Colorado Springs,Colorado,yes,4
+160,60 Mifflin Junction,Charlotte,North Carolina,no,5
+161,7 Atwood Way,Akron,Ohio,yes,4
+162,97 Hagan Place,Spokane,Washington,no,4
+163,4115 Bluejay Circle,Sacramento,California,yes,4
+164,90 Moland Street,Salt Lake City,Utah,yes,4
+165,89 Commercial Park,Greensboro,North Carolina,no,5
+166,58 Golf View Circle,Cleveland,Ohio,yes,5
+167,059 Emmet Pass,San Diego,California,no,4
+168,9695 Petterle Terrace,New Orleans,Louisiana,yes,4
+169,1190 Sage Place,Madison,Wisconsin,yes,5
+170,36747 International Way,Los Angeles,California,no,5
+171,77 Corscot Pass,Madison,Wisconsin,yes,5
+172,89 Clyde Gallagher Street,Virginia Beach,Virginia,no,4
+173,13 Portage Drive,Austin,Texas,yes,4
+174,59 Grasskamp Terrace,South Lake Tahoe,California,yes,4
+175,33 Hooker Court,Spring Hill,Florida,yes,4
+176,99 Judy Hill,Chicago,Illinois,no,4
+177,3 Kenwood Way,Lansing,Michigan,no,5
+178,839 Center Point,New York City,New York,yes,4
+179,81 Debra Terrace,Des Moines,Iowa,yes,5
+180,6177 Sachs Park,Sacramento,California,no,4
+181,42 Park Meadow Avenue,Glendale,Arizona,yes,4
+182,512 Daystar Pass,Kingsport,Tennessee,no,4
+183,399 Hermina Hill,Pomona,California,yes,5
+184,3 Manitowish Terrace,Baltimore,Maryland,no,5
+185,879 Commercial Alley,Columbus,Ohio,no,4
+186,4095 Mayfield Place,Durham,North Carolina,yes,5
+187,93 Independence Lane,Washington,District of Columbia,no,4
+188,89658 Pierstorff Junction,New Haven,Connecticut,no,5
+189,93831 Drewry Trail,Spokane,Washington,yes,5
+190,9765 Cody Road,Houston,Texas,no,5
+191,8379 Portage Alley,Houston,Texas,no,4
+192,7 Merrick Junction,Cedar Rapids,Iowa,no,4
+193,34853 American Park,Lexington,Kentucky,yes,5
+194,19776 Evergreen Parkway,Lake Worth,Florida,no,5
+195,58 Bay Terrace,Stockton,California,yes,5
+196,32809 Boyd Pass,Rockford,Illinois,no,5
+197,4 Pine View Drive,Saint Louis,Missouri,no,4
+198,61195 Paget Alley,Levittown,Pennsylvania,no,4
+199,07243 Duke Avenue,Tulsa,Oklahoma,yes,4
+200,0387 Morrow Plaza,Milwaukee,Wisconsin,no,4
+201,96844 Cardinal Alley,Baltimore,Maryland,yes,4
+202,529 Stone Corner Avenue,Decatur,Georgia,no,4
+203,85 Novick Trail,New York City,New York,no,5
+204,6352 Clarendon Parkway,Pittsburgh,Pennsylvania,yes,5
+205,19187 Arrowood Circle,Columbia,South Carolina,no,5
+206,3 Reinke Drive,Tallahassee,Florida,no,5
+207,057 North Trail,Odessa,Texas,no,4
+208,04 Brentwood Terrace,El Paso,Texas,no,4
+209,1205 Shasta Drive,Miami,Florida,yes,4
+210,8284 Cottonwood Lane,Portland,Oregon,yes,5
+211,0 Sutteridge Point,Madison,Wisconsin,no,4
+212,4 Riverside Pass,Atlanta,Georgia,yes,4
+213,30991 Hooker Circle,Los Angeles,California,yes,5
+214,09473 Annamark Crossing,Tulsa,Oklahoma,yes,4
+215,7 Schlimgen Park,Salt Lake City,Utah,yes,4
+216,6 Loeprich Road,New Haven,Connecticut,no,4
+217,93 Ruskin Avenue,Corpus Christi,Texas,yes,4
+218,6 Knutson Drive,Mobile,Alabama,yes,4
+219,7 Corscot Trail,San Antonio,Texas,no,4
+220,4483 Bayside Junction,Orlando,Florida,yes,4
+221,303 Fordem Street,Jacksonville,Florida,no,4
+222,93060 Truax Drive,New York City,New York,no,5
+223,683 Comanche Crossing,Baltimore,Maryland,no,4
+224,18 6th Hill,Boynton Beach,Florida,no,5
+225,62209 Del Mar Drive,Minneapolis,Minnesota,no,5
+226,0 Raven Plaza,Albany,New York,no,4
+227,1657 Ruskin Point,Pittsburgh,Pennsylvania,yes,5
+228,0748 Gina Street,San Francisco,California,no,5
+229,2 Eggendart Crossing,Dallas,Texas,no,4
+230,87 John Wall Hill,Pittsburgh,Pennsylvania,no,4
+231,0289 Jenifer Center,Boise,Idaho,no,5
+232,953 Onsgard Center,Augusta,Georgia,yes,4
+233,27 Bay Center,Juneau,Alaska,no,5
+234,37986 Johnson Way,Dearborn,Michigan,no,4
+235,1 Lakeland Parkway,Detroit,Michigan,no,4
+236,30001 Scofield Park,Pasadena,California,yes,4
+237,549 Armistice Crossing,Athens,Georgia,no,5
+238,0 Kim Parkway,Brooksville,Florida,no,4
+239,7994 Chive Center,Honolulu,Hawaii,no,4
+240,557 Tony Hill,Austin,Texas,yes,5
+241,611 Birchwood Alley,Washington,District of Columbia,yes,5
+242,6 Shoshone Crossing,Washington,District of Columbia,yes,5
+243,897 Sundown Park,Houston,Texas,yes,5
+244,24696 Nancy Hill,Houston,Texas,yes,5
+245,7 Heath Pass,Erie,Pennsylvania,yes,4
+246,74 Sloan Junction,Santa Monica,California,yes,4
+247,1 Melrose Plaza,Kansas City,Missouri,no,5
+248,46 Stang Alley,Fort Collins,Colorado,yes,5
+249,9 Artisan Avenue,Topeka,Kansas,no,4
+250,4303 Maryland Avenue,Louisville,Kentucky,no,4
+251,750 Darwin Court,Springfield,Missouri,no,4
+252,4680 Green Ridge Trail,Chicago,Illinois,yes,4
+253,9 Mallard Place,Fresno,California,no,5
+254,23 Sunfield Lane,Mesa,Arizona,no,4
+255,5 1st Drive,Greensboro,North Carolina,yes,5
+256,87 Schlimgen Lane,Fort Worth,Texas,yes,4
+257,35 Ilene Way,Milwaukee,Wisconsin,yes,4
+258,6659 Blackbird Center,Detroit,Michigan,yes,5
+259,9 Doe Crossing Terrace,Shreveport,Louisiana,no,4
+260,6491 Spaight Drive,Maple Plain,Minnesota,no,5
+261,0 Haas Alley,Shreveport,Louisiana,no,4
+262,1 Eggendart Road,Berkeley,California,no,5
+263,447 Schurz Park,Huntington,West Virginia,yes,5
+264,5 Northwestern Park,San Jose,California,no,4
+265,71915 Manufacturers Point,San Antonio,Texas,no,4
+266,95040 Becker Point,Memphis,Tennessee,no,4
+267,160 Mitchell Road,Nashville,Tennessee,no,5
+268,29 Calypso Alley,Rockville,Maryland,yes,5
+269,03 Texas Trail,Greenville,South Carolina,yes,4
+270,11964 Sommers Center,Houston,Texas,yes,4
+271,15535 Dorton Circle,Colorado Springs,Colorado,no,4
+272,4425 Hagan Park,Pueblo,Colorado,yes,5
+273,20 Hauk Circle,Mobile,Alabama,yes,5
+274,2228 Randy Hill,Santa Fe,New Mexico,yes,5
+275,48302 Prairie Rose Way,Austin,Texas,yes,4
+276,132 Beilfuss Way,Levittown,Pennsylvania,no,5
+277,8 Veith Junction,Cincinnati,Ohio,no,5
+278,8734 Fisk Avenue,Sacramento,California,no,4
+279,120 Tony Junction,Springfield,Illinois,no,4
+280,14973 Farmco Circle,Oakland,California,yes,4
+281,5 Comanche Place,Denver,Colorado,no,5
+282,82 Ludington Parkway,Miami,Florida,no,4
+283,1298 Fairview Pass,Louisville,Kentucky,no,4
+284,5161 Mesta Park,Fort Lauderdale,Florida,no,4
+285,35 Bowman Crossing,Arlington,Texas,yes,5
+286,25069 Glacier Hill Lane,Knoxville,Tennessee,yes,5
+287,032 Green Ridge Way,Columbia,Missouri,yes,5
+288,68 Haas Street,Greeley,Colorado,no,5
+289,57517 Chinook Parkway,Houston,Texas,no,4
+290,4 Grayhawk Terrace,El Paso,Texas,yes,5
+291,97 Eliot Pass,Wichita,Kansas,no,4
+292,12886 Sycamore Place,Kansas City,Missouri,no,5
+293,999 Northland Alley,Shawnee Mission,Kansas,no,4
+294,1 Loeprich Plaza,Bloomington,Illinois,no,4
+295,6 Sloan Alley,Atlanta,Georgia,no,5
+296,283 Becker Alley,West Palm Beach,Florida,no,5
+297,211 Macpherson Pass,Mesquite,Texas,yes,4
+298,1268 Chive Avenue,Boston,Massachusetts,yes,5
+299,0 Dahle Circle,Round Rock,Texas,no,4
+300,0024 Ohio Circle,Baltimore,Maryland,no,4
+301,390 Algoma Center,Decatur,Georgia,no,5
+302,786 Stang Pass,Paterson,New Jersey,yes,4
+303,607 Fieldstone Place,West Palm Beach,Florida,no,5
+304,3 Heath Parkway,Indianapolis,Indiana,no,5
+305,65333 Spohn Place,Montgomery,Alabama,no,4
+306,154 Bay Lane,Dallas,Texas,yes,4
+307,68926 Eliot Hill,Vero Beach,Florida,no,4
+308,4867 Crownhardt Terrace,Atlanta,Georgia,yes,4
+309,9 Dexter Center,Virginia Beach,Virginia,no,4
+310,17 Declaration Terrace,Las Vegas,Nevada,yes,4
+311,7029 Loeprich Junction,Bismarck,North Dakota,no,4
+312,0 Sommers Circle,Springfield,Illinois,yes,5
+313,0477 Sullivan Pass,Austin,Texas,yes,5
+314,524 Sachtjen Way,Carlsbad,California,no,4
+315,694 6th Street,Mobile,Alabama,yes,4
+316,2 Thackeray Junction,Fort Worth,Texas,yes,5
+317,99 Delladonna Pass,Maple Plain,Minnesota,yes,5
+318,36205 Prairieview Place,Lake Charles,Louisiana,yes,5
+319,7556 Reindahl Road,Virginia Beach,Virginia,yes,5
+320,4568 Dayton Pass,Aurora,Colorado,yes,4
+321,3 Comanche Court,Irving,Texas,yes,4
+322,2705 Ridgeway Crossing,Bakersfield,California,no,4
+323,3639 Chive Crossing,Miami,Florida,no,4
+324,059 Arkansas Avenue,Newark,Delaware,no,4
+325,5591 Kinsman Point,Gainesville,Florida,no,5
+326,74612 Golf Course Alley,Atlanta,Georgia,yes,5
+327,0 Hallows Hill,Naples,Florida,no,5
+328,92411 Pawling Drive,Chicago,Illinois,no,5
+329,952 Schiller Place,Washington,District of Columbia,yes,5
+330,1067 Swallow Circle,Evansville,Indiana,yes,4
+331,8095 Forest Street,Tucson,Arizona,yes,5
+332,49657 Vera Avenue,Largo,Florida,no,4
+333,83 Fallview Park,Tulsa,Oklahoma,yes,4
+334,88421 Delaware Pass,Lincoln,Nebraska,no,5
+335,785 Novick Terrace,Orlando,Florida,no,4
+336,2116 Delladonna Alley,Fort Lauderdale,Florida,yes,4
+337,862 Farmco Place,Dayton,Ohio,no,5
+338,1 Mayfield Plaza,Port Saint Lucie,Florida,no,4
+339,54127 Commercial Center,Alexandria,Virginia,yes,4
+340,0 Valley Edge Crossing,Kansas City,Missouri,yes,5
+341,3 Dayton Hill,Orlando,Florida,no,5
+342,18 School Park,Orlando,Florida,yes,4
+343,98850 Gulseth Lane,New York City,New York,yes,5
+344,6570 Oriole Road,Peoria,Illinois,yes,4
+345,3594 Vernon Place,Washington,District of Columbia,no,5
+346,232 Schlimgen Place,Pittsburgh,Pennsylvania,yes,5
+347,2 Nobel Hill,Huntington,West Virginia,yes,5
+348,245 Arkansas Pass,Lake Worth,Florida,yes,4
+349,3860 Lighthouse Bay Pass,Erie,Pennsylvania,yes,4
+350,0484 Coolidge Parkway,Houston,Texas,no,5
+351,47774 Pepper Wood Trail,Naples,Florida,no,5
+352,23 Transport Avenue,Hampton,Virginia,no,5
+353,62 Ilene Crossing,Scottsdale,Arizona,yes,5
+354,2546 Reinke Drive,Eugene,Oregon,no,5
+355,6 Lien Street,Albany,New York,no,4
+356,8182 Shelley Alley,Fayetteville,North Carolina,yes,4
+357,4 Swallow Terrace,Columbus,Ohio,no,5
+358,06839 Fair Oaks Point,Providence,Rhode Island,no,4
+359,53491 Victoria Park,Sandy,Utah,yes,4
+360,689 Marcy Pass,Oklahoma City,Oklahoma,yes,4
+361,760 South Trail,Mobile,Alabama,no,5
+362,19 Talisman Crossing,Brooklyn,New York,yes,4
+363,2924 Northwestern Terrace,Charlotte,North Carolina,yes,5
+364,2726 Graceland Street,Detroit,Michigan,yes,5
+365,2300 Comanche Terrace,Waco,Texas,yes,4
+366,91 Eastlawn Park,Zephyrhills,Florida,yes,5
+367,8 Hollow Ridge Court,Peoria,Arizona,yes,5
+368,1 Westport Way,New York City,New York,yes,4
+369,8969 Hagan Center,Brooklyn,New York,yes,4
+370,55478 Loftsgordon Point,Washington,District of Columbia,yes,4
+371,8 Algoma Crossing,Washington,District of Columbia,yes,5
+372,4 Reinke Drive,Bismarck,North Dakota,no,5
+373,4 Sherman Court,El Paso,Texas,yes,4
+374,3 Tony Terrace,Stamford,Connecticut,yes,4
+375,89689 High Crossing Hill,Atlanta,Georgia,yes,4
+376,01163 Eggendart Pass,Decatur,Illinois,no,4
+377,7 Thompson Avenue,Fullerton,California,yes,5
+378,9732 Chive Court,Boston,Massachusetts,no,5
+379,8082 Redwing Alley,Minneapolis,Minnesota,no,4
+380,8 Waywood Lane,Richmond,Virginia,yes,4
+381,21 Memorial Hill,Dallas,Texas,no,5
+382,0 Namekagon Pass,Pensacola,Florida,no,5
+383,27 Florence Circle,Champaign,Illinois,yes,5
+384,489 Mesta Point,Saint Paul,Minnesota,yes,4
+385,30014 Memorial Terrace,Sacramento,California,no,5
+386,5162 Russell Drive,Silver Spring,Maryland,no,5
+387,14 Northfield Center,Midland,Michigan,no,5
+388,6457 Mallard Point,Las Vegas,Nevada,yes,5
+389,301 Acker Avenue,Saint Cloud,Minnesota,no,5
+390,617 Carpenter Way,Flushing,New York,no,5
+391,3 Riverside Road,Sacramento,California,no,4
+392,39 Summit Way,Madison,Wisconsin,yes,5
+393,66648 New Castle Place,Huntington,West Virginia,no,4
+394,91702 Cody Way,Port Washington,New York,no,4
+395,9778 Stephen Junction,Tulsa,Oklahoma,no,5
+396,769 Bultman Avenue,Fresno,California,yes,5
+397,411 Lighthouse Bay Crossing,Woburn,Massachusetts,no,5
+398,303 Clove Park,New York City,New York,yes,4
+399,36393 Tennyson Parkway,Los Angeles,California,yes,4
+400,66869 Leroy Avenue,Tulsa,Oklahoma,yes,4
+401,30 Bunker Hill Alley,Bronx,New York,yes,5
+402,5028 Clemons Terrace,Saint Joseph,Missouri,yes,4
+403,1 Golf View Alley,Philadelphia,Pennsylvania,yes,4
+404,256 Maple Wood Park,San Antonio,Texas,yes,5
+405,246 Mayer Terrace,Orlando,Florida,yes,4
+406,94520 Comanche Hill,Springfield,Missouri,yes,5
+407,526 Donald Street,Birmingham,Alabama,no,5
+408,7 Eastwood Pass,East Saint Louis,Illinois,no,4
+409,52807 6th Hill,Montgomery,Alabama,yes,4
+410,42255 Iowa Way,Nashville,Tennessee,yes,4
+411,192 Carey Hill,Washington,District of Columbia,no,5
+412,85 Sachtjen Pass,San Francisco,California,yes,4
+413,3937 Donald Circle,Miami Beach,Florida,yes,5
+414,0148 Westend Court,Lancaster,Pennsylvania,yes,4
+415,56921 Artisan Crossing,Columbus,Georgia,no,4
+416,94738 Truax Street,Midland,Michigan,no,5
+417,29802 Loeprich Avenue,Harrisburg,Pennsylvania,no,5
+418,4063 Nobel Road,Shreveport,Louisiana,no,4
+419,5 Sycamore Parkway,Oakland,California,no,4
+420,531 Meadow Vale Parkway,Mobile,Alabama,yes,4
+421,64185 Prairieview Terrace,Elizabeth,New Jersey,yes,4
+422,39 Service Road,Tulsa,Oklahoma,no,5
+423,0 Surrey Point,Omaha,Nebraska,yes,5
+424,9716 Kipling Street,Dallas,Texas,yes,4
+425,60 Mandrake Place,Oklahoma City,Oklahoma,no,4
+426,6784 Meadow Vale Center,Santa Fe,New Mexico,no,4
+427,45 Old Shore Avenue,Indianapolis,Indiana,no,4
+428,6 Carey Lane,Cincinnati,Ohio,yes,4
+429,9 Schlimgen Terrace,Washington,District of Columbia,no,5
+430,62752 Tomscot Way,Scranton,Pennsylvania,yes,5
+431,0 Heffernan Place,Austin,Texas,yes,4
+432,518 Orin Alley,Fort Worth,Texas,yes,5
+433,7048 Brickson Park Center,Denton,Texas,no,4
+434,540 Golf Pass,San Bernardino,California,yes,5
+435,00 Bunker Hill Road,London,Kentucky,no,4
+436,858 American Ash Trail,Philadelphia,Pennsylvania,no,4
+437,8278 Farmco Terrace,Atlanta,Georgia,no,4
+438,3861 Holy Cross Circle,Akron,Ohio,yes,4
+439,0 Pine View Center,Riverside,California,no,4
+440,2648 Hollow Ridge Parkway,Cape Coral,Florida,no,5
+441,6 Eastwood Hill,Silver Spring,Maryland,no,5
+442,317 Boyd Court,Champaign,Illinois,yes,5
+443,46267 Warner Trail,Springfield,Illinois,no,4
+444,35328 Harbort Plaza,Philadelphia,Pennsylvania,yes,4
+445,98 Petterle Parkway,Boise,Idaho,yes,5
+446,9 Nelson Court,Fort Smith,Arkansas,no,4
+447,969 East Pass,Palo Alto,California,yes,5
+448,645 Elmside Plaza,Yakima,Washington,yes,4
+449,332 Homewood Place,Amarillo,Texas,no,5
+450,88325 Sutteridge Pass,Reno,Nevada,yes,5
+451,005 Saint Paul Center,Boston,Massachusetts,yes,5
+452,204 Nova Place,Des Moines,Iowa,yes,4
+453,097 Grasskamp Lane,Colorado Springs,Colorado,no,4
+454,220 Bayside Place,Washington,District of Columbia,yes,5
+455,7384 Blackbird Plaza,Homestead,Florida,no,4
+456,12588 Bunker Hill Avenue,Shreveport,Louisiana,yes,4
+457,4 Surrey Avenue,Naples,Florida,yes,5
+458,5933 Tennessee Hill,Raleigh,North Carolina,no,5
+459,77569 Surrey Parkway,Des Moines,Iowa,no,5
+460,88213 Del Sol Crossing,Kansas City,Missouri,no,4
+461,72252 Schiller Court,Augusta,Georgia,no,4
+462,1095 Bartelt Point,Sacramento,California,no,5
+463,6 Kennedy Place,Springfield,Illinois,yes,4
+464,9 Dwight Circle,Charleston,West Virginia,no,4
+465,20574 Montana Lane,San Antonio,Texas,no,4
+466,55878 Menomonie Pass,Chicago,Illinois,yes,5
+467,925 Leroy Park,Birmingham,Alabama,no,5
+468,9 Daystar Terrace,Waterbury,Connecticut,yes,5
+469,9 Macpherson Hill,Houston,Texas,yes,4
+470,1 Spohn Circle,Evansville,Indiana,yes,4
+471,08833 Corben Place,Norfolk,Virginia,yes,4
+472,5 Del Sol Circle,Washington,District of Columbia,no,4
+473,8923 3rd Drive,Atlanta,Georgia,yes,5
+474,64 Eagle Crest Pass,Anaheim,California,no,5
+475,23 Mccormick Avenue,Vero Beach,Florida,yes,5
+476,4692 Scott Junction,Rochester,New York,yes,4
+477,394 Holy Cross Court,Atlanta,Georgia,no,5
+478,624 Vernon Hill,Omaha,Nebraska,yes,4
+479,177 Bunting Plaza,Detroit,Michigan,no,4
+480,89 Farragut Park,Shreveport,Louisiana,yes,5
+481,761 Porter Hill,Boston,Massachusetts,no,5
+482,290 Bluejay Trail,Brooklyn,New York,yes,5
+483,918 Red Cloud Lane,Lincoln,Nebraska,yes,5
+484,79761 Autumn Leaf Terrace,El Paso,Texas,yes,4
+485,2 Marcy Avenue,Washington,District of Columbia,no,4
+486,55 Ridgeview Trail,Huntington,West Virginia,no,5
+487,90 Hoard Avenue,Denver,Colorado,yes,5
+488,56796 Eagle Crest Junction,South Bend,Indiana,yes,5
+489,5 Bayside Point,Toledo,Ohio,no,5
+490,4576 Service Center,Newton,Massachusetts,yes,4
+491,417 Monument Hill,San Bernardino,California,no,4
+492,2107 Kim Place,Reno,Nevada,no,5
+493,847 Pine View Road,Denver,Colorado,no,4
+494,8509 4th Point,Louisville,Kentucky,yes,5
+495,292 Anzinger Junction,Redwood City,California,no,5
+496,5127 Schurz Avenue,Detroit,Michigan,no,4
+497,9 Badeau Place,Kalamazoo,Michigan,no,5
+498,1 Utah Court,Worcester,Massachusetts,yes,5
+499,20176 Pepper Wood Street,Lansing,Michigan,yes,4
+500,4 Lakewood Gardens Avenue,Corpus Christi,Texas,yes,4
+501,9 Homewood Alley,Tampa,Florida,yes,4
+502,26329 Carioca Plaza,Bethesda,Maryland,no,4
+503,96955 Florence Center,Anchorage,Alaska,no,4
+504,99519 Manley Center,Chicago,Illinois,no,5
+505,6229 Farwell Terrace,Charleston,West Virginia,yes,4
+506,867 Milwaukee Way,Savannah,Georgia,yes,5
+507,588 Shelley Center,Grand Rapids,Michigan,no,4
+508,335 Sunbrook Junction,Colorado Springs,Colorado,no,5
+509,31619 Di Loreto Place,Charleston,West Virginia,no,5
+510,4703 Parkside Junction,Boston,Massachusetts,no,4
+511,9996 Lien Circle,Plano,Texas,yes,5
+512,8492 Iowa Alley,Madison,Wisconsin,no,4
+513,39027 Kennedy Avenue,Scranton,Pennsylvania,no,4
+514,85378 Burning Wood Drive,Dallas,Texas,yes,5
+515,42 Fulton Avenue,Washington,District of Columbia,yes,4
+516,94 Pierstorff Park,Knoxville,Tennessee,yes,4
+517,796 Vernon Pass,Norfolk,Virginia,yes,5
+518,5 Independence Crossing,San Diego,California,no,4
+519,04 Algoma Lane,Kent,Washington,yes,5
+520,6 Kropf Circle,Durham,North Carolina,yes,5
+521,345 High Crossing Parkway,Knoxville,Tennessee,yes,4
+522,95755 Derek Point,Irvine,California,yes,4
+523,234 Summer Ridge Point,Phoenix,Arizona,no,4
+524,6030 Vera Drive,Van Nuys,California,yes,4
+525,3 4th Circle,Beaumont,Texas,no,5
+526,0 Boyd Road,Palo Alto,California,yes,5
+527,5 Anhalt Pass,Fort Lauderdale,Florida,yes,4
+528,32 Clove Lane,Huntsville,Alabama,yes,4
+529,04149 Eliot Court,Sacramento,California,yes,4
+530,3 Nancy Center,Omaha,Nebraska,no,4
+531,4 4th Crossing,San Diego,California,yes,5
+532,04470 Lerdahl Crossing,Des Moines,Iowa,yes,4
+533,340 Oakridge Avenue,San Antonio,Texas,yes,4
+534,51731 Bellgrove Parkway,Akron,Ohio,yes,4
+535,667 Warner Avenue,San Bernardino,California,yes,5
+536,27558 Rigney Lane,Hartford,Connecticut,no,5
+537,41797 Graedel Street,Lexington,Kentucky,no,5
+538,50 Crescent Oaks Center,Memphis,Tennessee,no,5
+539,4 Elmside Place,Evansville,Indiana,no,4
+540,397 Lyons Avenue,Monroe,Louisiana,no,5
+541,502 3rd Lane,Minneapolis,Minnesota,no,4
+542,1 Heath Pass,Pompano Beach,Florida,no,4
+543,38 Pennsylvania Junction,Phoenix,Arizona,no,5
+544,2944 Blaine Hill,New Haven,Connecticut,yes,5
+545,9528 Alpine Crossing,Jamaica,New York,no,4
+546,087 Haas Street,Metairie,Louisiana,yes,4
+547,48881 Sundown Point,Atlanta,Georgia,no,5
+548,164 Almo Trail,Charleston,West Virginia,no,4
+549,98862 North Park,Fayetteville,North Carolina,no,4
+550,14 Washington Pass,Richmond,Virginia,no,4
+551,26848 Shasta Street,Santa Fe,New Mexico,no,4
+552,1031 Dennis Trail,Phoenix,Arizona,yes,4
+553,51 Northview Terrace,Salem,Oregon,no,4
+554,147 Lunder Street,Los Angeles,California,yes,4
+555,964 Lillian Park,Duluth,Minnesota,yes,4
+556,55064 Anthes Road,Winter Haven,Florida,no,5
+557,12149 Little Fleur Junction,Topeka,Kansas,no,4
+558,02324 Lukken Center,San Jose,California,yes,5
+559,66 Dovetail Plaza,Mobile,Alabama,yes,4
+560,30 Sachtjen Street,Monroe,Louisiana,yes,5
+561,68299 Crownhardt Point,Madison,Wisconsin,yes,5
+562,726 Forest Dale Place,Tyler,Texas,no,5
+563,60574 Blackbird Parkway,Humble,Texas,no,4
+564,03 Clyde Gallagher Road,Waco,Texas,no,4
+565,63132 Warrior Way,Sacramento,California,no,5
+566,97 Bultman Plaza,Washington,District of Columbia,yes,4
+567,2 Florence Center,Wichita,Kansas,yes,5
+568,566 Continental Point,New Haven,Connecticut,no,4
+569,12 Hooker Place,Bryan,Texas,yes,5
+570,6410 Red Cloud Alley,Wilmington,Delaware,yes,4
+571,0 Sachtjen Alley,Des Moines,Iowa,yes,5
+572,371 Main Lane,Denver,Colorado,yes,5
+573,496 Crownhardt Hill,Valley Forge,Pennsylvania,no,5
+574,835 Jay Circle,Tucson,Arizona,yes,5
+575,8621 Charing Cross Terrace,Dallas,Texas,yes,4
+576,4706 Michigan Place,Des Moines,Iowa,yes,5
+577,32398 Ruskin Circle,Pocatello,Idaho,yes,4
+578,68 Amoth Street,Knoxville,Tennessee,no,4
+579,40292 Lawn Park,Raleigh,North Carolina,no,5
+580,9 Merchant Circle,Vancouver,Washington,yes,5
+581,6581 Macpherson Street,Denver,Colorado,yes,4
+582,7 Manufacturers Pass,Pittsburgh,Pennsylvania,no,4
+583,1 Troy Circle,Helena,Montana,no,4
+584,928 Schiller Junction,Dallas,Texas,no,5
+585,16 Texas Road,Raleigh,North Carolina,yes,4
+586,7 Donald Terrace,Peoria,Illinois,yes,4
+587,93244 Melby Avenue,Springfield,Illinois,no,5
+588,7000 Porter Alley,Boynton Beach,Florida,no,5
+589,8 Surrey Plaza,Cincinnati,Ohio,yes,4
+590,1 Briar Crest Way,Salt Lake City,Utah,no,4
+591,0679 Susan Pass,Seattle,Washington,yes,4
+592,8 Hollow Ridge Circle,Ventura,California,yes,4
+593,571 Rigney Drive,Birmingham,Alabama,yes,4
+594,47491 Macpherson Pass,Salt Lake City,Utah,no,5
+595,79 Pearson Lane,Naples,Florida,yes,4
+596,6 Dottie Circle,Salt Lake City,Utah,yes,4
+597,563 Rieder Street,Akron,Ohio,no,4
+598,340 Stang Park,Colorado Springs,Colorado,no,4
+599,88 Farmco Center,Portsmouth,Virginia,yes,4
+600,76246 Roxbury Junction,Kansas City,Missouri,yes,5
+601,40474 Maple Trail,Hayward,California,no,4
+602,1 Stang Avenue,Santa Fe,New Mexico,no,5
+603,83 Hooker Plaza,Galveston,Texas,yes,5
+604,6 Elka Alley,Salinas,California,no,4
+605,8 Wayridge Parkway,San Luis Obispo,California,no,5
+606,8946 Rutledge Center,Columbus,Ohio,yes,5
+607,0808 Clarendon Road,New Orleans,Louisiana,no,5
+608,6868 Straubel Way,Tyler,Texas,no,5
+609,3947 Forster Plaza,Monticello,Minnesota,yes,5
+610,6 Miller Road,Detroit,Michigan,yes,5
+611,71588 Bowman Road,Alexandria,Louisiana,yes,5
+612,868 Porter Center,New Orleans,Louisiana,yes,5
+613,87743 Vidon Pass,North Hollywood,California,no,5
+614,938 Anderson Center,Boston,Massachusetts,yes,4
+615,4 Holmberg Junction,Tulsa,Oklahoma,yes,4
+616,34 Transport Plaza,Washington,District of Columbia,yes,4
+617,182 Maryland Court,Fort Worth,Texas,no,4
+618,6913 Oakridge Trail,New York City,New York,yes,5
+619,45021 Schiller Pass,Tulsa,Oklahoma,no,5
+620,5 Schurz Lane,Washington,District of Columbia,no,4
+621,40 Kensington Trail,Roanoke,Virginia,yes,4
+622,1499 Blaine Terrace,Bakersfield,California,no,5
+623,26544 Evergreen Circle,Portland,Oregon,no,5
+624,8 Eagle Crest Drive,Escondido,California,yes,5
+625,033 Merry Parkway,Columbia,South Carolina,yes,4
+626,03 Golden Leaf Circle,Arlington,Texas,yes,4
+627,92 Farwell Hill,Charlotte,North Carolina,no,5
+628,63047 Badeau Court,Chico,California,no,5
+629,5 Oriole Court,Edmond,Oklahoma,no,5
+630,45546 Macpherson Center,Colorado Springs,Colorado,no,4
+631,02737 Warrior Drive,Chicago,Illinois,yes,5
+632,25412 Ridgeview Way,Grand Rapids,Michigan,yes,5
+633,6334 Carpenter Park,Minneapolis,Minnesota,yes,4
+634,99450 Bashford Pass,Tacoma,Washington,no,4
+635,2884 Huxley Hill,Fort Worth,Texas,no,4
+636,94520 South Pass,Reno,Nevada,yes,4
+637,934 Manitowish Road,Washington,District of Columbia,yes,4
+638,080 5th Trail,Young America,Minnesota,no,4
+639,1 Memorial Junction,Laredo,Texas,yes,4
+640,140 Ronald Regan Pass,Winston Salem,North Carolina,no,4
+641,631 Independence Drive,El Paso,Texas,no,5
+642,540 Springview Drive,Muskegon,Michigan,no,5
+643,74 Kedzie Parkway,Milwaukee,Wisconsin,yes,5
+644,499 Graedel Trail,Charlotte,North Carolina,no,4
+645,7 Dayton Point,New York City,New York,no,4
+646,7 Sundown Circle,Charlotte,North Carolina,no,5
+647,4299 Paget Place,Charlotte,North Carolina,no,4
+648,776 Hoepker Point,Largo,Florida,yes,4
+649,8 Toban Junction,Las Vegas,Nevada,yes,5
+650,698 Everett Street,Aurora,Illinois,yes,4
+651,0902 Fremont Plaza,Boulder,Colorado,no,4
+652,3886 Morning Road,Wilkes Barre,Pennsylvania,yes,5
+653,7203 Shasta Center,Virginia Beach,Virginia,yes,4
+654,5279 Riverside Parkway,Trenton,New Jersey,yes,5
+655,46634 Westport Terrace,New York City,New York,yes,5
+656,9 Mendota Alley,Boise,Idaho,no,4
+657,0512 Fuller Hill,Houston,Texas,yes,5
+658,1 Stuart Hill,Anchorage,Alaska,no,4
+659,4 Mallory Alley,Tuscaloosa,Alabama,no,5
+660,0664 Aberg Park,Washington,District of Columbia,no,5
+661,8 Homewood Parkway,Salt Lake City,Utah,yes,5
+662,65259 Hermina Terrace,Des Moines,Iowa,no,5
+663,321 Springs Place,Paterson,New Jersey,yes,4
+664,2025 Prentice Alley,Washington,District of Columbia,no,5
+665,8420 Anhalt Trail,Tulsa,Oklahoma,no,5
+666,14801 Schurz Circle,Birmingham,Alabama,no,5
+667,4601 Petterle Hill,Virginia Beach,Virginia,yes,5
+668,757 Maple Wood Way,Chicago,Illinois,no,4
+669,847 David Pass,New York City,New York,yes,5
+670,74 Walton Alley,Austin,Texas,yes,5
+671,12003 Gina Center,Lees Summit,Missouri,yes,4
+672,9205 Gulseth Plaza,Wilmington,North Carolina,no,4
+673,41 Northridge Drive,Arlington,Virginia,yes,4
+674,6071 Eagle Crest Circle,Punta Gorda,Florida,yes,5
+675,296 Westridge Court,Naples,Florida,yes,5
+676,5657 Banding Lane,Raleigh,North Carolina,yes,4
+677,22454 Miller Hill,Lansing,Michigan,yes,4
+678,34 Petterle Street,Albuquerque,New Mexico,no,5
+679,9 Red Cloud Crossing,Omaha,Nebraska,no,4
+680,1 Independence Park,Scranton,Pennsylvania,no,4
+681,9703 Sachtjen Terrace,Birmingham,Alabama,no,5
+682,3378 Heath Point,Tallahassee,Florida,no,5
+683,76 Raven Road,New Orleans,Louisiana,yes,4
+684,872 Schmedeman Place,Nashville,Tennessee,yes,5
+685,8668 Union Alley,Houston,Texas,yes,4
+686,262 Warbler Point,Lake Charles,Louisiana,yes,5
+687,18 John Wall Way,Albany,New York,no,4
+688,3804 Homewood Center,Albany,Georgia,yes,4
+689,49435 Mandrake Pass,Panama City,Florida,no,4
+690,34 Brentwood Road,Seattle,Washington,no,5
+691,81 Bobwhite Place,Atlanta,Georgia,no,4
+692,285 Hoffman Hill,Wichita Falls,Texas,yes,5
+693,30 Hooker Place,Denver,Colorado,yes,5
+694,16 Doe Crossing Street,San Antonio,Texas,no,4
+695,3 Meadow Valley Court,Flint,Michigan,no,5
+696,8038 Vermont Terrace,Brooklyn,New York,yes,5
+697,094 Cambridge Lane,High Point,North Carolina,yes,5
+698,625 Emmet Street,Kent,Washington,no,4
+699,65898 Heffernan Court,New York City,New York,no,5
+700,50254 Bultman Pass,Littleton,Colorado,yes,4
+701,342 Portage Place,Johnson City,Tennessee,yes,5
+702,652 Iowa Alley,Washington,District of Columbia,yes,5
+703,5933 Muir Way,Saint Paul,Minnesota,yes,5
+704,93 Dayton Trail,Fort Smith,Arkansas,yes,5
+705,86 Grasskamp Terrace,Pompano Beach,Florida,yes,5
+706,2 Donald Trail,Cincinnati,Ohio,yes,4
+707,02757 Brickson Park Alley,San Antonio,Texas,yes,5
+708,8 Lyons Hill,Garland,Texas,yes,5
+709,8778 Bunker Hill Junction,Jacksonville,Florida,no,5
+710,2346 Coleman Center,San Diego,California,yes,5
+711,8 Myrtle Way,Rockford,Illinois,yes,4
+712,60 Bellgrove Court,Jackson,Mississippi,yes,4
+713,4 Waywood Parkway,San Antonio,Texas,yes,4
+714,53121 Oxford Way,Vienna,Virginia,no,5
+715,7419 Prentice Road,Birmingham,Alabama,no,4
+716,62 Maywood Center,Tuscaloosa,Alabama,no,4
+717,44 Cambridge Way,Fort Worth,Texas,no,5
+718,1 Weeping Birch Street,Washington,District of Columbia,yes,4
+719,585 Waxwing Point,Indianapolis,Indiana,no,4
+720,00 International Crossing,Littleton,Colorado,no,4
+721,265 Namekagon Court,Louisville,Kentucky,no,4
+722,89 Buell Way,San Diego,California,yes,4
+723,6 Bluestem Terrace,Springfield,Illinois,no,4
+724,2248 Granby Point,New Orleans,Louisiana,yes,4
+725,63372 Rieder Crossing,Springfield,Illinois,no,4
+726,52 8th Park,Oakland,California,yes,4
+727,213 Mosinee Terrace,Detroit,Michigan,no,5
+728,3211 Mitchell Terrace,Atlanta,Georgia,no,5
+729,54534 Victoria Place,Atlanta,Georgia,no,4
+730,86 Meadow Vale Trail,Dallas,Texas,no,5
+731,27467 Hanover Court,Baltimore,Maryland,yes,4
+732,231 3rd Crossing,Seattle,Washington,yes,4
+733,0 Waxwing Way,Fort Lauderdale,Florida,yes,5
+734,77272 Melrose Trail,Salt Lake City,Utah,yes,4
+735,8899 Bay Plaza,Falls Church,Virginia,no,5
+736,715 Brown Point,Albuquerque,New Mexico,no,4
+737,74522 Pankratz Circle,Lawrenceville,Georgia,yes,4
+738,8587 Grover Circle,Cumming,Georgia,no,5
+739,4 Lighthouse Bay Lane,Oklahoma City,Oklahoma,yes,4
+740,99707 Westerfield Junction,Kansas City,Kansas,yes,4
+741,81 Dawn Avenue,Staten Island,New York,yes,4
+742,1 Gerald Point,Las Vegas,Nevada,yes,5
+743,96 Eastwood Street,Burbank,California,no,4
+744,93 Kinsman Avenue,Minneapolis,Minnesota,yes,5
+745,9 Sunbrook Place,Sacramento,California,yes,5
+746,60 Glacier Hill Court,Salt Lake City,Utah,no,5
+747,1 Nelson Drive,Irvine,California,yes,4
+748,48 Farragut Way,Chicago,Illinois,yes,4
+749,764 Brentwood Crossing,Fresno,California,yes,5
+750,23151 Scofield Parkway,El Paso,Texas,no,4
+751,968 Dunning Park,Tulsa,Oklahoma,no,5
+752,5308 Reinke Alley,Charlottesville,Virginia,no,4
+753,9268 Chive Place,Fort Smith,Arkansas,no,4
+754,13 Green Ridge Junction,Sacramento,California,no,5
+755,13678 Blackbird Center,Chicago,Illinois,no,5
+756,0496 School Avenue,Young America,Minnesota,no,4
+757,6 Annamark Terrace,Schenectady,New York,no,4
+758,828 Northwestern Court,Jackson,Mississippi,no,5
+759,15000 Westend Road,Toledo,Ohio,yes,5
+760,913 Hanson Circle,Toledo,Ohio,no,5
+761,4266 Summit Road,Dallas,Texas,no,5
+762,459 Elgar Parkway,Inglewood,California,yes,5
+763,568 Independence Center,Beaumont,Texas,yes,4
+764,2336 Myrtle Hill,Cleveland,Ohio,yes,5
+765,718 Hagan Way,Saint Petersburg,Florida,yes,5
+766,5402 Armistice Avenue,Seminole,Florida,yes,5
+767,10496 Columbus Avenue,Corpus Christi,Texas,yes,4
+768,7 Amoth Alley,Jefferson City,Missouri,no,5
+769,7 Hanover Drive,Abilene,Texas,yes,4
+770,134 Wayridge Alley,Miami,Florida,no,5
+771,67288 Jana Park,Syracuse,New York,yes,5
+772,62 Carberry Alley,Bakersfield,California,yes,5
+773,07 Starling Hill,Houston,Texas,yes,4
+774,77 Oak Valley Terrace,Stamford,Connecticut,yes,4
+775,3209 Shoshone Pass,Oxnard,California,no,5
+776,3 Barby Hill,West Palm Beach,Florida,no,4
+777,0 Prairie Rose Park,Honolulu,Hawaii,no,4
+778,643 Thierer Way,Manchester,New Hampshire,no,4
+779,4749 Sommers Place,Boise,Idaho,no,5
+780,3 Schlimgen Lane,Pittsburgh,Pennsylvania,yes,5
+781,8303 Jay Parkway,Chicago,Illinois,no,4
+782,8369 Bunker Hill Street,Phoenix,Arizona,yes,4
+783,536 Shelley Drive,Detroit,Michigan,yes,4
+784,980 Cardinal Avenue,Miami,Florida,no,4
+785,78 Westerfield Pass,Minneapolis,Minnesota,no,5
+786,2 Valley Edge Avenue,New Orleans,Louisiana,yes,4
+787,39309 Myrtle Point,Shawnee Mission,Kansas,no,5
+788,418 Memorial Avenue,Pueblo,Colorado,yes,5
+789,93245 Norway Maple Road,Anaheim,California,no,4
+790,9 Shoshone Place,Dayton,Ohio,yes,4
+791,2648 Judy Hill,Roanoke,Virginia,no,4
+792,3808 Victoria Trail,Shawnee Mission,Kansas,yes,4
+793,2950 Mifflin Court,Kent,Washington,no,4
+794,75 Dahle Parkway,San Antonio,Texas,no,4
+795,2 Spenser Junction,Jacksonville,Florida,yes,4
+796,9 Northview Court,Peoria,Illinois,yes,5
+797,8911 Moulton Lane,New York City,New York,yes,5
+798,701 Jay Way,Tulsa,Oklahoma,yes,5
+799,739 Donald Point,Houston,Texas,no,5
+800,7 Del Mar Point,Las Cruces,New Mexico,yes,4
+801,9062 Hanson Crossing,Shawnee Mission,Kansas,no,4
+802,6 Randy Trail,Brooklyn,New York,no,5
+803,27682 Main Pass,San Diego,California,yes,5
+804,06937 2nd Pass,Colorado Springs,Colorado,no,4
+805,7 Dunning Place,Arvada,Colorado,yes,5
+806,2917 Hallows Terrace,Dayton,Ohio,no,4
+807,1919 David Alley,Los Angeles,California,no,4
+808,5 Autumn Leaf Place,Peoria,Illinois,yes,4
+809,21 Swallow Drive,Dallas,Texas,yes,4
+810,1764 Del Sol Place,Cambridge,Massachusetts,no,5
+811,270 Vermont Terrace,Reno,Nevada,yes,4
+812,94 Sutherland Crossing,Philadelphia,Pennsylvania,no,4
+813,6 Russell Park,Fort Lauderdale,Florida,yes,5
+814,351 Badeau Junction,New York City,New York,yes,5
+815,5 Scott Lane,Bakersfield,California,no,5
+816,10 Sommers Avenue,El Paso,Texas,no,5
+817,2 Donald Alley,Naples,Florida,no,5
+818,114 Eastlawn Crossing,Detroit,Michigan,no,4
+819,952 Lighthouse Bay Parkway,Birmingham,Alabama,no,5
+820,65791 Express Crossing,Corpus Christi,Texas,no,4
+821,4449 Old Shore Way,Brooklyn,New York,no,4
+822,44 Kim Trail,Tallahassee,Florida,no,4
+823,34264 Jenifer Drive,New York City,New York,no,5
+824,2 Lyons Park,Pasadena,California,yes,4
+825,799 Meadow Valley Plaza,Charlotte,North Carolina,yes,4
+826,8 Gateway Trail,Oklahoma City,Oklahoma,no,5
+827,57035 Southridge Plaza,Louisville,Kentucky,no,4
+828,448 Heath Park,Baltimore,Maryland,yes,5
+829,62483 Lake View Way,Bronx,New York,yes,4
+830,48 Knutson Lane,Migrate,Kentucky,no,5
+831,702 Gateway Crossing,Odessa,Texas,yes,5
+832,4524 Pine View Street,Atlanta,Georgia,yes,5
+833,11386 Haas Parkway,Buffalo,New York,yes,4
+834,8 Clyde Gallagher Park,Denver,Colorado,yes,4
+835,5931 Crowley Way,Dallas,Texas,no,5
+836,90 Kingsford Crossing,Colorado Springs,Colorado,no,5
+837,6372 Mifflin Place,Erie,Pennsylvania,yes,5
+838,79 Russell Avenue,Watertown,Massachusetts,no,4
+839,2029 Killdeer Alley,San Antonio,Texas,no,4
+840,30302 Nancy Plaza,Erie,Pennsylvania,no,5
+841,48 Duke Place,Baton Rouge,Louisiana,yes,4
+842,9 Golf Course Circle,Houston,Texas,no,4
+843,201 South Hill,Austin,Texas,yes,4
+844,17177 Red Cloud Road,San Rafael,California,yes,4
+845,241 Mosinee Alley,Philadelphia,Pennsylvania,no,5
+846,4 Montana Drive,New York City,New York,yes,4
+847,8300 Shasta Way,Whittier,California,no,4
+848,029 Shelley Way,Largo,Florida,no,4
+849,5274 Loftsgordon Center,Washington,District of Columbia,yes,4
+850,321 Vahlen Court,Birmingham,Alabama,no,5
+851,655 Havey Hill,San Diego,California,yes,4
+852,93 Arrowood Court,Salt Lake City,Utah,no,5
+853,88 Straubel Circle,Toledo,Ohio,no,5
+854,59403 Esker Drive,Vienna,Virginia,no,4
+855,00277 Tennyson Road,Los Angeles,California,no,5
+856,954 Hallows Parkway,Tulsa,Oklahoma,no,4
+857,069 Barnett Center,Mobile,Alabama,yes,5
+858,2 Loeprich Point,New York City,New York,no,4
+859,48 Calypso Way,El Paso,Texas,no,5
+860,1380 Melby Road,Winston Salem,North Carolina,no,4
+861,7860 Bayside Point,Santa Fe,New Mexico,yes,4
+862,2059 Dryden Court,San Mateo,California,no,4
+863,17848 Corry Crossing,Washington,District of Columbia,no,4
+864,25 Dwight Pass,Las Vegas,Nevada,yes,5
+865,050 Vernon Terrace,Hartford,Connecticut,no,4
+866,514 Carioca Junction,Houston,Texas,yes,5
+867,8 Old Shore Drive,New York City,New York,no,5
+868,576 Leroy Center,Roanoke,Virginia,no,4
+869,66267 Anzinger Plaza,Lakewood,Washington,yes,4
+870,790 Chive Crossing,West Palm Beach,Florida,no,4
+871,01 Sutteridge Alley,Tampa,Florida,yes,4
+872,5 Shoshone Court,Evansville,Indiana,no,4
+873,741 Brentwood Point,Denver,Colorado,no,5
+874,1752 Oriole Street,Los Angeles,California,no,4
+875,2046 Glendale Circle,Los Angeles,California,yes,5
+876,759 Lukken Crossing,Oklahoma City,Oklahoma,yes,5
+877,0268 Gale Park,San Diego,California,yes,4
+878,78696 Mitchell Terrace,Boston,Massachusetts,yes,5
+879,157 Green Crossing,Sacramento,California,yes,5
+880,8043 6th Way,Phoenix,Arizona,no,4
+881,43 Hanover Avenue,Miami,Florida,no,5
+882,7268 Mockingbird Terrace,Philadelphia,Pennsylvania,no,4
+883,457 Hagan Plaza,Sacramento,California,yes,4
+884,6803 Oak Valley Alley,Honolulu,Hawaii,yes,5
+885,64980 Sunbrook Way,New Orleans,Louisiana,yes,5
+886,6438 Northport Place,Bonita Springs,Florida,yes,5
+887,0 Oakridge Trail,Montgomery,Alabama,yes,4
+888,72112 Stoughton Terrace,Tallahassee,Florida,no,4
+889,3 Carey Terrace,Pittsburgh,Pennsylvania,no,5
+890,67256 Waxwing Pass,Tacoma,Washington,no,4
+891,292 Farragut Center,Cincinnati,Ohio,yes,5
+892,0 Debra Park,Longview,Texas,no,5
+893,63 Erie Avenue,East Saint Louis,Illinois,yes,4
+894,3044 Bluestem Trail,Roanoke,Virginia,no,4
+895,719 Heffernan Trail,Jamaica,New York,no,4
+896,0 Fordem Way,Louisville,Kentucky,no,5
+897,858 Ridge Oak Street,Santa Barbara,California,yes,5
+898,80 Troy Drive,Grand Rapids,Michigan,yes,5
+899,1657 Toban Pass,Clearwater,Florida,no,4
+900,777 Columbus Center,Sacramento,California,no,5
+901,331 American Center,Louisville,Kentucky,yes,4
+902,75 Erie Court,Young America,Minnesota,no,4
+903,180 Mandrake Drive,Denver,Colorado,no,5
+904,3 Briar Crest Plaza,Corona,California,no,4
+905,2962 Hoffman Way,Rochester,New York,yes,4
+906,6 Northridge Street,Iowa City,Iowa,no,5
+907,22526 Aberg Hill,New York City,New York,yes,5
+908,9 4th Trail,Lakeland,Florida,yes,5
+909,0 Meadow Ridge Terrace,Monroe,Louisiana,no,4
+910,07 Annamark Park,Lafayette,Indiana,no,4
+911,44161 Bartillon Circle,Nashville,Tennessee,yes,4
+912,6513 Iowa Way,Shawnee Mission,Kansas,no,5
+913,581 Marcy Parkway,Topeka,Kansas,no,4
+914,3 Elka Avenue,Norfolk,Virginia,yes,5
+915,07581 Debra Circle,Reading,Pennsylvania,no,5
+916,932 Del Mar Point,Vero Beach,Florida,yes,4
+917,91 Maryland Point,Baltimore,Maryland,no,5
+918,70 Bayside Hill,Norfolk,Virginia,yes,4
+919,3649 Roxbury Avenue,San Diego,California,yes,4
+920,319 Gateway Trail,Dayton,Ohio,no,5
+921,6 Bluejay Plaza,Fresno,California,no,5
+922,700 Riverside Center,Houston,Texas,no,5
+923,2258 Anthes Avenue,Garland,Texas,no,4
+924,7 Dayton Hill,Charleston,South Carolina,yes,4
+925,385 Delaware Park,Newark,Delaware,no,5
+926,5 Hauk Center,Toledo,Ohio,yes,4
+927,22 Harbort Plaza,Young America,Minnesota,no,4
+928,52 Rowland Road,Clearwater,Florida,yes,4
+929,18 Cordelia Pass,Reston,Virginia,yes,5
+930,7 Michigan Street,Atlanta,Georgia,no,5
+931,1683 Spaight Crossing,Danbury,Connecticut,yes,5
+932,72595 Larry Alley,Rochester,Minnesota,no,5
+933,02701 Pearson Trail,Miami,Florida,no,4
+934,1766 7th Hill,Bethesda,Maryland,no,5
+935,8129 Calypso Center,Lincoln,Nebraska,no,4
+936,94394 Clove Alley,Minneapolis,Minnesota,no,4
+937,0 Spaight Plaza,New York City,New York,yes,4
+938,9462 Fisk Avenue,Seattle,Washington,no,4
+939,3688 Briar Crest Center,Panama City,Florida,no,4
+940,569 Hanover Crossing,Kingsport,Tennessee,no,5
+941,701 Amoth Place,Sacramento,California,no,4
+942,37349 Stang Drive,Huntsville,Alabama,yes,4
+943,51 Sundown Circle,Honolulu,Hawaii,yes,5
+944,79847 Eliot Junction,Dallas,Texas,no,5
+945,2207 Roth Alley,Corpus Christi,Texas,no,5
+946,718 Spenser Drive,Hayward,California,yes,4
+947,358 Pankratz Hill,Louisville,Kentucky,no,4
+948,98944 Manitowish Way,New York City,New York,no,5
+949,48 Comanche Trail,Richmond,Virginia,yes,4
+950,80 Farwell Hill,Springfield,Illinois,no,5
+951,056 Mosinee Street,Charlotte,North Carolina,no,4
+952,57155 Emmet Alley,Memphis,Tennessee,yes,5
+953,730 Becker Circle,Houston,Texas,yes,5
+954,82 Buell Lane,Sacramento,California,yes,4
+955,08 Amoth Road,Miami,Florida,yes,4
+956,74 Nelson Street,Tucson,Arizona,yes,4
+957,847 Magdeline Plaza,Fairfax,Virginia,yes,5
+958,75182 Johnson Center,Oklahoma City,Oklahoma,yes,4
+959,95 Kensington Road,Oxnard,California,yes,4
+960,2335 Stone Corner Terrace,York,Pennsylvania,no,5
+961,0 Express Hill,Indianapolis,Indiana,no,4
+962,3004 Main Parkway,Sarasota,Florida,yes,4
+963,5502 Melody Crossing,Idaho Falls,Idaho,no,5
+964,2454 La Follette Lane,Houston,Texas,yes,5
+965,566 Chive Point,Milwaukee,Wisconsin,yes,4
+966,270 Menomonie Parkway,Colorado Springs,Colorado,no,4
+967,80 Northview Place,Wichita Falls,Texas,yes,4
+968,23801 Killdeer Street,Oakland,California,no,4
+969,4773 Mallard Trail,West Palm Beach,Florida,yes,4
+970,742 Grover Drive,Chicago,Illinois,no,5
+971,74342 1st Hill,Fairfield,Connecticut,yes,5
+972,1253 Morrow Terrace,Baton Rouge,Louisiana,yes,4
+973,62 Michigan Parkway,Rochester,New York,no,5
+974,29470 Bobwhite Center,Salt Lake City,Utah,no,4
+975,54984 Bay Circle,Atlanta,Georgia,no,5
+976,7 Aberg Lane,Youngstown,Ohio,yes,5
+977,3101 Scott Place,Gainesville,Florida,yes,4
+978,53 Sommers Circle,Van Nuys,California,yes,4
+979,1969 Banding Park,Baltimore,Maryland,no,4
+980,400 Beilfuss Point,Fort Worth,Texas,no,5
+981,126 Graceland Street,Des Moines,Iowa,no,5
+982,167 Harbort Avenue,Albuquerque,New Mexico,yes,5
+983,30 Michigan Parkway,Kansas City,Missouri,no,5
+984,3 Lillian Avenue,Jackson,Mississippi,no,5
+985,4349 Saint Paul Court,Madison,Wisconsin,yes,4
+986,7346 Dixon Park,Austin,Texas,yes,5
+987,53 Mesta Alley,Norfolk,Virginia,yes,4
+988,15 Drewry Street,Tacoma,Washington,no,4
+989,16 Pleasure Avenue,Colorado Springs,Colorado,yes,4
+990,90 Twin Pines Place,Atlanta,Georgia,no,4
+991,653 Forster Junction,White Plains,New York,yes,5
+992,69059 Fieldstone Street,Boise,Idaho,no,5
+993,8 Magdeline Way,Houston,Texas,no,5
+994,959 Reinke Lane,Portland,Maine,yes,5
+995,3 Novick Pass,Detroit,Michigan,no,5
+996,9572 Westridge Park,Monroe,Louisiana,yes,5
+997,05430 Kropf Court,Birmingham,Alabama,no,4
+998,61 Park Meadow Avenue,Houston,Texas,no,4
+999,95906 Lighthouse Bay Road,Rockford,Illinois,yes,5
+1000,5853 Portage Alley,College Station,Texas,no,5
