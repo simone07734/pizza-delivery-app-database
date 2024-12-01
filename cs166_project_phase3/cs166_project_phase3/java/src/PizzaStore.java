@@ -354,6 +354,94 @@ public class PizzaStore {
     * Creates a new user
     **/
    public static void CreateUser(PizzaStore esql){
+
+      //A user needs the following:
+      // * login
+      // * password
+      // * role
+      // * favorite items (should be null at start?)
+      // * phone number
+      boolean valid = false;
+      String newLogin = "";
+      String password = "";
+      String role = "customer";
+      String phoneNum = "";
+      BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
+
+      while(!valid){
+         System.out.print("Please enter your new login or \'q\' to cancel: ");
+         try{
+            newLogin = consoleInput.readLine();
+            if(newLogin.equals("q")) return;
+
+            valid = esql.executeQueryAndPrintResult("SELECT F.login FROM Users F WHERE F.login = " + "\'" +newLogin + "\'") == 0;
+            if(!valid){
+               System.out.println("\n User " + newLogin+" already exists. Please use a different login. \n");
+            }
+         }catch(Exception e){
+            System.out.println("Error reading input, please try again." + e.getMessage());
+            System.exit(-1);
+         }
+         
+      }
+      // if user exists already (i.e. login) display so. Execute a query with supposed login
+      System.out.println("-----------------------------------------");
+      System.out.println("User available.");
+
+      valid = false;
+      while(!valid){
+         System.out.print("Please enter your new password: ");
+         try{
+            password = consoleInput.readLine();
+            
+
+            valid = !password.equals("");
+            if(!valid){
+               System.out.println("\n Password cannot be empty. Please try again. \n");
+            }
+         }catch(Exception e){
+            System.out.println("Error reading input, please try again later." + e.getMessage());
+            System.exit(-1);
+         }
+         
+      }
+      // if user exists already (i.e. login) display so. Execute a query with supposed login
+      System.out.println("-----------------------------------------");
+
+      valid = false;
+      while(!valid){
+         System.out.print("Lastly, please enter your phone number: ");
+         try{
+            phoneNum = consoleInput.readLine();
+            
+
+            valid = !phoneNum.equals("");
+            if(!valid){
+               System.out.println("\n Phone number cannot be empty. Please try again. \n");
+            }
+         }catch(Exception e){
+            System.out.println("Error reading input, please try again later." + e.getMessage());
+            System.exit(-1);
+         }
+         
+      }
+      //otherwise put in necessary information and add to user table
+      try{
+         esql.executeUpdate("INSERT INTO Users VALUES ("+ "\'" + newLogin + "\'" +", "+ "\'"+ password + "\'"+", 'customer', null, "+ "\'" + phoneNum + "\'" + ");");
+         boolean successfullyInserted = esql.executeQuery("SELECT * FROM Users F WHERE F.login = \'" + newLogin + "\'") != 0;
+         System.out.println("-----------------------------------------");
+
+         if(successfullyInserted){
+            System.out.println("Successfully created user. Returning to main menu...");
+         }else{
+            System.out.println("Error inserting. Please try again later.");
+         }
+         System.out.println("-----------------------------------------");
+      }catch(Exception e){
+         System.out.println(e.getMessage());
+      }
+
+
    }//end CreateUser
 
 
