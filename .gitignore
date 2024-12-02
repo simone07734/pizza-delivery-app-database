@@ -1,4 +1,4 @@
-sql/src/load_data.sql
+load_data.sql
 
 # Compiled class file
 *.class
