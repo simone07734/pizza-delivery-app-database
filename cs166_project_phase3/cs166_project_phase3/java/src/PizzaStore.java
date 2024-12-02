@@ -459,7 +459,10 @@ public class PizzaStore {
          queryResults = esql.executeQueryAndReturnResult("SELECT * FROM Users F WHERE F.login = \'" + login + "\'");
          System.out.println("-----------------------------------------");
 
-
+         if(queryResults.size() == 0){
+            System.out.println("No user, returning to main menu.");
+            return null;
+         }
          boolean valid = false;
 
          while(!valid){
@@ -481,7 +484,7 @@ public class PizzaStore {
       }
 
       //System.out.println(queryResults);
-      if(queryResults.size() == 0) return null;
+      
       return queryResults.get(0).get(0);
    }//end
    
@@ -490,7 +493,65 @@ public class PizzaStore {
 
    public static void viewProfile(PizzaStore esql) {}
    public static void updateProfile(PizzaStore esql) {}
-   public static void viewMenu(PizzaStore esql) {}
+
+   public static void viewMenu(PizzaStore esql) {
+      boolean exit = false;
+      BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
+
+      while (!exit){
+         //Basic menu feedback UI
+         System.out.println("Pizza Menu");
+         System.out.println("-----------------------------------------");
+
+         try{
+            List<List<String>> items = new ArrayList<>();
+            items = esql.executeQueryAndReturnResult("SELECT * FROM Items");
+
+            //print all items that match query
+            for(List<String> item : items){
+               System.out.println(item.get(0) + " " + item.get(2) + " " + item.get(3));
+         }
+
+         }catch(Exception e){
+            System.out.println(e.getMessage());
+         }
+         
+         //list for filter options
+         System.out.println("-----------------------------------------");
+         System.out.println("Options");
+         System.out.println(" ");
+         System.out.println("1. Filter by Type");
+         System.out.println("2. Filter by Max Price");
+         System.out.println("3. Sort Price Low to High");
+         System.out.println("4. Sort Price High to Low");
+         System.out.println("5. Exit");
+         System.out.println(" ");
+         System.out.print("Please enter option: ");
+
+         String choice = "";
+         try{
+            choice = consoleInput.readLine();
+         }catch(Exception e){ System.out.println(e.getMessage()); }
+
+         switch(choice){
+            case "1":
+               break;
+            case "2":
+               break;
+            case "3":
+               break;
+            case "4":
+               break;
+            case "5":
+               exit = true;
+               break;
+            default:
+               break;
+         }
+      }
+
+   }
+
    public static void placeOrder(PizzaStore esql) {}
    public static void viewAllOrders(PizzaStore esql) {}
    public static void viewRecentOrders(PizzaStore esql) {}
