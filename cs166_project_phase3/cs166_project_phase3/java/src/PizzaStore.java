@@ -450,8 +450,41 @@ public class PizzaStore {
     * @return User login or null is the user does not exist
     **/
    public static String LogIn(PizzaStore esql){
-      return null;
+      List<List<String>> queryResults = new ArrayList<>();
+      BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
+
+      try{
+         System.out.print("Please enter login: ");
+         String login = consoleInput.readLine();
+         queryResults = esql.executeQueryAndReturnResult("SELECT * FROM Users F WHERE F.login = \'" + login + "\'");
+         System.out.println("-----------------------------------------");
+
+
+         boolean valid = false;
+
+         while(!valid){
+            System.out.print("Please enter password: ");
+            String password = consoleInput.readLine();
+            System.out.println("-----------------------------------------");
+            valid = password.equals(queryResults.get(0).get(1));
+            if(valid){
+               System.out.println("Login success!");
+            }else{
+               System.out.println("Incorrect Username or Password! Please try again.");
+               
+            }
+            System.out.println("-----------------------------------------");
+         }
+      }catch(Exception e){
+         System.out.println(e.getMessage());
+         System.exit(-1);
+      }
+
+      //System.out.println(queryResults);
+      if(queryResults.size() == 0) return null;
+      return queryResults.get(0).get(0);
    }//end
+   
 
 // Rest of the functions definition go in here
 
