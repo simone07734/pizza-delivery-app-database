@@ -496,6 +496,10 @@ public class PizzaStore {
 
    public static void viewMenu(PizzaStore esql) {
       boolean exit = false;
+      boolean filterByType = false;
+      int maxPrice = Integer.MAX_VALUE;
+      String type = "";
+      int sort = -1; //-1 for no sort, 0 for low to high, 1 for high to low
       BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
 
       while (!exit){
@@ -505,7 +509,17 @@ public class PizzaStore {
 
          try{
             List<List<String>> items = new ArrayList<>();
-            items = esql.executeQueryAndReturnResult("SELECT * FROM Items");
+            String query = "SELECT * FROM Items F WHERE F.price < " + maxPrice;
+            if(filterByType) query += " WHERE F.typeOfItem = \'" + type + "\'";
+            //The filter integer will determine which items to filter and how. The 0th bit determines if filtering is enabled.
+            // 1st bit determines max price
+            // 2nd bit determines
+
+            if(sort != -1) query += " ORDER BY F.price";
+            if(sort == 1) query += " DESC";
+
+
+            items = esql.executeQueryAndReturnResult(query);
 
             //print all items that match query
             for(List<String> item : items){
@@ -524,7 +538,8 @@ public class PizzaStore {
          System.out.println("2. Filter by Max Price");
          System.out.println("3. Sort Price Low to High");
          System.out.println("4. Sort Price High to Low");
-         System.out.println("5. Exit");
+         System.out.println("5. Clear Filters");
+         System.out.println("6. Exit");
          System.out.println(" ");
          System.out.print("Please enter option: ");
 
@@ -537,12 +552,34 @@ public class PizzaStore {
             case "1":
                break;
             case "2":
+
+               try{
+                  String input = "";
+                  boolean valid = false;
+                  while(!valid){
+                     System.out.println("-----------------------------------------");
+                     System.out.print("Please enter a maximum price: ");
+                     input = consoleInput.readLine();
+                     valid = isNumeric(input);
+                     if(!valid) System.out.println("Please enter a valid price.");
+                  }
+                  maxPrice = Integer.parseInt(input);
+               }catch(Exception e){}
+
                break;
             case "3":
+               sort = 0;
                break;
             case "4":
+               sort = 1;
                break;
             case "5":
+               filterByType = false;
+               type = "";
+               sort = -1;
+               maxPrice = Integer.MAX_VALUE;
+               break;
+            case "6":
                exit = true;
                break;
             default:
@@ -561,6 +598,8 @@ public class PizzaStore {
    public static void updateMenu(PizzaStore esql) {}
    public static void updateUser(PizzaStore esql) {}
 
-
+   public static boolean isNumeric(String str) { //Helper function. Matches regex
+      return str.matches("-?\\d+(\\.\\d+)?");
+   }
 }//end PizzaStore
 
