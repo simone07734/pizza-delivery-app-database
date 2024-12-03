@@ -510,15 +510,12 @@ public class PizzaStore {
          try{
             List<List<String>> items = new ArrayList<>();
             String query = "SELECT * FROM Items F WHERE F.price < " + maxPrice;
-            if(filterByType) query += " WHERE F.typeOfItem = \'" + type + "\'";
-            //The filter integer will determine which items to filter and how. The 0th bit determines if filtering is enabled.
-            // 1st bit determines max price
-            // 2nd bit determines
+            if(filterByType) query += " AND F.typeOfItem = \' " + type + "\'";
 
             if(sort != -1) query += " ORDER BY F.price";
             if(sort == 1) query += " DESC";
 
-
+            //System.out.println(query);
             items = esql.executeQueryAndReturnResult(query);
 
             //print all items that match query
@@ -550,6 +547,23 @@ public class PizzaStore {
 
          switch(choice){
             case "1":
+
+               try{
+                  String input = "";
+                  boolean valid = false;
+
+                  while(!valid){
+                     System.out.println("-----------------------------------------");
+                     System.out.print("Please enter an item type. Valid selections are 'entree' 'drinks' or 'sides': ");
+                     input = consoleInput.readLine();
+                     valid = input.equals("entree") || input.equals("drinks") || input.equals("sides");
+                     if(!valid) System.out.println("Please enter a valid item type.");
+                  }
+                  filterByType = true;
+                  type = input;
+               }catch(Exception e){}
+
+
                break;
             case "2":
 
@@ -593,7 +607,41 @@ public class PizzaStore {
    public static void viewAllOrders(PizzaStore esql) {}
    public static void viewRecentOrders(PizzaStore esql) {}
    public static void viewOrderInfo(PizzaStore esql) {}
-   public static void viewStores(PizzaStore esql) {}
+
+
+   public static void viewStores(PizzaStore esql) {
+      BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
+      List<List<String>> results = new ArrayList<>();
+      String input = "";
+      boolean exit = false;
+      while(!exit){
+         System.out.println("All Stores");
+         System.out.println("-----------------------------------------");
+
+         try{
+            String query = "SELECT * FROM Store F";
+            results = esql.executeQueryAndReturnResult(query);
+
+            for(List<String> result : results){
+               System.out.print(result.get(0) + " ");
+               System.out.print(result.get(1) + ", ");
+               System.out.print(result.get(2) + ", ");
+               System.out.print(result.get(3) + " ");
+               System.out.print(result.get(4).equals("yes") ? "Open" : "Closed");
+               System.out.print("\n");
+            }
+
+            System.out.println("-----------------------------------------");
+            System.out.println("Return to Main Menu? (y): ");
+            input = consoleInput.readLine();
+            exit = input.equals("y");
+
+         }catch(Exception e){System.out.println(e.getMessage());}
+         
+      }
+   }
+
+
    public static void updateOrderStatus(PizzaStore esql) {}
    public static void updateMenu(PizzaStore esql) {}
    public static void updateUser(PizzaStore esql) {}
