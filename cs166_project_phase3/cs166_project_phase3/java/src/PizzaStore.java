@@ -257,9 +257,13 @@ public class PizzaStore {
             System.out.println("2. Log in");
             System.out.println("9. < EXIT");
             String authorisedUser = null;
+            List<String> userInfo = new ArrayList<>();
             switch (readChoice()){
                case 1: CreateUser(esql); break;
-               case 2: authorisedUser = LogIn(esql); break;
+               case 2: 
+                  userInfo = LogIn(esql);
+                  authorisedUser = userInfo.get(0); 
+                  break;
                case 9: keepon = false; break;
                default : System.out.println("Unrecognized choice!"); break;
             }//end switch
@@ -286,18 +290,25 @@ public class PizzaStore {
 
                 System.out.println(".........................");
                 System.out.println("20. Log out");
+
+                //System.out.println("User info" + userInfo);
                 switch (readChoice()){
-                   case 1: viewProfile(esql); break;
-                   case 2: updateProfile(esql); break;
+                   case 1: viewProfile(esql, authorisedUser); break;
+                   case 2: updateProfile(esql, authorisedUser); break;
                    case 3: viewMenu(esql); break;
                    case 4: placeOrder(esql); break;
                    case 5: viewAllOrders(esql); break;
                    case 6: viewRecentOrders(esql); break;
                    case 7: viewOrderInfo(esql); break;
                    case 8: viewStores(esql); break;
-                   case 9: updateOrderStatus(esql); break;
-                   case 10: updateMenu(esql); break;
-                   case 11: updateUser(esql); break;
+                   case 9: 
+                     System.out.println("_"+userInfo.get(1)+"_"); 
+                     if(userInfo.get(1).contains("manager") || (userInfo.get(1).contains("driver"))){
+                        updateOrderStatus(esql);
+                     }
+                     break;
+                   case 10: if(userInfo.get(1).contains("manager")) updateMenu(esql); break;
+                   case 11: if(userInfo.get(1).contains("manager")) updateUser(esql); break;
 
 
 
@@ -449,24 +460,468 @@ public class PizzaStore {
     * Check log in credentials for an existing user
     * @return User login or null is the user does not exist
     **/
-   public static String LogIn(PizzaStore esql){
-      return null;
+   public static List<String> LogIn(PizzaStore esql){
+      List<List<String>> queryResults = new ArrayList<>();
+      BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
+
+      try{
+         System.out.print("Please enter login: ");
+         String login = consoleInput.readLine();
+         queryResults = esql.executeQueryAndReturnResult("SELECT * FROM Users F WHERE F.login = \'" + login + "\'");
+         System.out.println("-----------------------------------------");
+
+         if(queryResults.size() == 0){
+            System.out.println("No user, returning to main menu.");
+            return null;
+         }
+         boolean valid = false;
+
+         while(!valid){
+            System.out.print("Please enter password: ");
+            String password = consoleInput.readLine();
+            System.out.println("-----------------------------------------");
+            valid = password.equals(queryResults.get(0).get(1));
+            if(valid){
+               System.out.println("Login success!");
+            }else{
+               System.out.println("Incorrect Username or Password! Please try again.");
+               
+            }
+            System.out.println("-----------------------------------------");
+         }
+      }catch(Exception e){
+         System.out.println(e.getMessage());
+         System.exit(-1);
+      }
+
+      //System.out.println(queryResults);
+      List<String> output = new ArrayList<>();
+      output.add(queryResults.get(0).get(0));
+      output.add(queryResults.get(0).get(2));
+      return output;
    }//end
+   
 
 // Rest of the functions definition go in here
 
-   public static void viewProfile(PizzaStore esql) {}
-   public static void updateProfile(PizzaStore esql) {}
-   public static void viewMenu(PizzaStore esql) {}
+   public static void viewProfile(PizzaStore esql, String _login) {
+            BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
+      String login = "";
+      String choice = "";
+
+      String desiredField = "";
+      String newValue = "";
+
+      boolean valid = false;
+      List<List<String>> result = new ArrayList<>();
+
+      try{
+
+      result = esql.executeQueryAndReturnResult("SELECT * FROM Users F WHERE F.login = \'" + _login + "\'");
+      //display user information
+      
+      System.out.println("-----------------------------------------");
+      System.out.println("Current user fields");
+      System.out.println("");
+
+      System.out.println("Login: "+ result.get(0).get(0));
+      System.out.println("Password: "+ "********");
+      System.out.println("Role: "+ result.get(0).get(2));
+
+      System.out.println("Favorite Item: "+ result.get(0).get(3));
+      System.out.println("Phone Number: "+ result.get(0).get(4));
+
+      System.out.println("-----------------------------------------");
+      System.out.println("Options");
+      System.out.println("1. Return to main menu");
+      System.out.println("");
+      while(!valid){
+         System.out.println("-----------------------------------------");
+         System.out.print("Desired field: ");
+         choice = consoleInput.readLine();
+
+         switch(choice){
+            case "1":
+               valid = true;
+               break;
+            default:
+               valid = false;
+               System.out.println("Please enter a valid choice.");
+               break;
+         }
+         //ask which field to change
+      }
+      System.out.println("-----------------------------------------");
+      //update accordingly
+      }catch(Exception e){System.out.println(e.getMessage());}
+   }
+
+
+   public static void updateProfile(PizzaStore esql, String _login) {
+      BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
+      String login = "";
+      String choice = "";
+
+      String desiredField = "";
+      String newValue = "";
+
+      boolean valid = false;
+      List<List<String>> result = new ArrayList<>();
+
+      try{
+
+      result = esql.executeQueryAndReturnResult("SELECT * FROM Users F WHERE F.login = \'" + _login + "\'");
+      //display user information
+      
+      System.out.println("-----------------------------------------");
+      System.out.println("Current user fields");
+      System.out.println("");
+
+      System.out.println("Login: "+ result.get(0).get(0));
+      System.out.println("Password: "+ "********");
+      System.out.println("Role: "+ result.get(0).get(2));
+
+      System.out.println("Favorite Item: "+ result.get(0).get(3));
+      System.out.println("Phone Number: "+ result.get(0).get(4));
+
+      System.out.println("-----------------------------------------");
+      System.out.println("Which field would you like to change?");
+      System.out.println("1. Password");
+      System.out.println("2. Favorite Item");
+      System.out.println("3. Phone Number");
+      System.out.println("4. Return to Main Menu");
+      System.out.println("");
+      while(!valid){
+         System.out.print("Desired field: ");
+         choice = consoleInput.readLine();
+
+         valid = true;
+         switch(choice){
+            case "1":
+               desiredField = "password";
+               break;
+            case "2":
+               desiredField = "favoriteItems";
+               break;
+            case "3":
+               desiredField = "phoneNum";
+               break;
+            case "4":
+               return;
+            default:
+               valid = false;
+               System.out.println("Please enter a valid choice.");
+               break;
+         }
+         //ask which field to change
+      }
+      System.out.println("-----------------------------------------");
+      System.out.println("What would you like to change this field to?");
+      System.out.println("");
+      System.out.print("Desired value: ");
+      newValue = consoleInput.readLine();
+
+      esql.executeUpdate("UPDATE Users SET " + desiredField + " = \'" + newValue + "\' WHERE login = " + "\'"+ _login+"\'");
+      System.out.println("-----------------------------------------");
+      System.out.println("Profile successfully updated. Returning to main menu...");
+      //update accordingly
+      }catch(Exception e){System.out.println(e.getMessage());}
+   }
+
+   public static void viewMenu(PizzaStore esql) {
+      boolean exit = false;
+      boolean filterByType = false;
+      int maxPrice = Integer.MAX_VALUE;
+      String type = "";
+      int sort = -1; //-1 for no sort, 0 for low to high, 1 for high to low
+      BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
+
+      while (!exit){
+         //Basic menu feedback UI
+         System.out.println("Pizza Menu");
+         System.out.println("-----------------------------------------");
+
+         try{
+            List<List<String>> items = new ArrayList<>();
+            String query = "SELECT * FROM Items F WHERE F.price < " + maxPrice;
+            if(filterByType) query += " AND F.typeOfItem = \' " + type + "\'";
+
+            if(sort != -1) query += " ORDER BY F.price";
+            if(sort == 1) query += " DESC";
+
+            //System.out.println(query);
+            items = esql.executeQueryAndReturnResult(query);
+
+            //print all items that match query
+            for(List<String> item : items){
+               System.out.println(item.get(0) + " " + item.get(2) + " " + item.get(3));
+         }
+
+         }catch(Exception e){
+            System.out.println(e.getMessage());
+         }
+         
+         //list for filter options
+         System.out.println("-----------------------------------------");
+         System.out.println("Options");
+         System.out.println(" ");
+         System.out.println("1. Filter by Type");
+         System.out.println("2. Filter by Max Price");
+         System.out.println("3. Sort Price Low to High");
+         System.out.println("4. Sort Price High to Low");
+         System.out.println("5. Clear Filters");
+         System.out.println("6. Exit");
+         System.out.println(" ");
+         System.out.print("Please enter option: ");
+
+         String choice = "";
+         try{
+            choice = consoleInput.readLine();
+         }catch(Exception e){ System.out.println(e.getMessage()); }
+
+         switch(choice){
+            case "1":
+
+               try{
+                  String input = "";
+                  boolean valid = false;
+
+                  while(!valid){
+                     System.out.println("-----------------------------------------");
+                     System.out.print("Please enter an item type. Valid selections are 'entree' 'drinks' or 'sides': ");
+                     input = consoleInput.readLine();
+                     valid = input.equals("entree") || input.equals("drinks") || input.equals("sides");
+                     if(!valid) System.out.println("Please enter a valid item type.");
+                  }
+                  filterByType = true;
+                  type = input;
+               }catch(Exception e){}
+
+
+               break;
+            case "2":
+
+               try{
+                  String input = "";
+                  boolean valid = false;
+                  while(!valid){
+                     System.out.println("-----------------------------------------");
+                     System.out.print("Please enter a maximum price: ");
+                     input = consoleInput.readLine();
+                     valid = isNumeric(input);
+                     if(!valid) System.out.println("Please enter a valid price.");
+                  }
+                  maxPrice = Integer.parseInt(input);
+               }catch(Exception e){}
+
+               break;
+            case "3":
+               sort = 0;
+               break;
+            case "4":
+               sort = 1;
+               break;
+            case "5":
+               filterByType = false;
+               type = "";
+               sort = -1;
+               maxPrice = Integer.MAX_VALUE;
+               break;
+            case "6":
+               exit = true;
+               break;
+            default:
+               break;
+         }
+      }
+
+   }
+
    public static void placeOrder(PizzaStore esql) {}
    public static void viewAllOrders(PizzaStore esql) {}
    public static void viewRecentOrders(PizzaStore esql) {}
    public static void viewOrderInfo(PizzaStore esql) {}
-   public static void viewStores(PizzaStore esql) {}
-   public static void updateOrderStatus(PizzaStore esql) {}
+
+
+   public static void viewStores(PizzaStore esql) {
+      BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
+      List<List<String>> results = new ArrayList<>();
+      String input = "";
+      boolean exit = false;
+      while(!exit){
+         System.out.println("All Stores");
+         System.out.println("-----------------------------------------");
+
+         try{
+            String query = "SELECT * FROM Store F";
+            results = esql.executeQueryAndReturnResult(query);
+
+            for(List<String> result : results){
+               System.out.print(result.get(0) + " ");
+               System.out.print(result.get(1) + ", ");
+               System.out.print(result.get(2) + ", ");
+               System.out.print(result.get(3) + " ");
+               System.out.print(result.get(4).equals("yes") ? "Open" : "Closed");
+               System.out.print("\n");
+            }
+
+            System.out.println("-----------------------------------------");
+            System.out.println("Return to Main Menu? (y): ");
+            input = consoleInput.readLine();
+            exit = input.equals("y");
+
+         }catch(Exception e){System.out.println(e.getMessage());}
+         
+      }
+   }
+
+
+   public static void updateOrderStatus(PizzaStore esql) {
+      BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
+      List<List<String>> order = new ArrayList<>();
+      String query = "SELECT * FROM FoodOrder F WHERE F.orderID = ";
+      String orderID = "";
+
+
+      //enter orderID
+      System.out.println("-----------------------------------------");
+      System.out.println("Please enter the order ID that you wish to change the status of.");
+      System.out.print("Order ID: ");
+      try{
+         orderID = consoleInput.readLine();
+         query += orderID;
+         order = esql.executeQueryAndReturnResult(query);
+         System.out.println("-----------------------------------------");
+         System.out.println("Current order status");
+         System.out.println("");
+         for(String item : order.get(0)){
+            System.out.print(item + " ");
+         }
+
+         System.out.println("");
+         boolean valid = false;
+         String newStatus = "";
+
+         while(!valid){
+            System.out.println("-----------------------------------------");
+            System.out.print("Enter new status, incomplete (i) or complete (c): ");
+
+            String choice = consoleInput.readLine();
+            switch(choice){
+               case "i":
+                  newStatus = "incomplete";
+                  valid = true;
+                  break;
+               case "c":
+                  newStatus = "complete";
+                  valid = true;
+                  break;
+               default:
+                  System.out.println("Unrecognized choice, please try again.");
+                  valid = false;
+                  break;
+            }
+         }
+
+         //Update
+         esql.executeUpdate("UPDATE FoodOrder SET orderStatus = \'" + newStatus + "\' WHERE orderID = " + order.get(0).get(0));
+         System.out.println("-----------------------------------------");
+         System.out.println("Order status updated. Returning to main menu...");
+         
+
+      }catch(Exception e){System.out.println(e.getMessage());}
+      //find
+      
+      //enter status
+
+      //update
+   }
    public static void updateMenu(PizzaStore esql) {}
-   public static void updateUser(PizzaStore esql) {}
+   public static void updateUser(PizzaStore esql) {
+      
+      String login = "";
+      String choice = "";
 
+      String desiredField = "";
+      String newValue = "";
 
+      boolean valid = false;
+      List<List<String>> result = new ArrayList<>();
+
+      try{
+      //enter login for a user
+      System.out.println("-----------------------------------------");
+      System.out.print("Please enter the user's login: ");
+      login = in.readLine();
+
+      result = esql.executeQueryAndReturnResult("SELECT * FROM Users F WHERE F.login = \'" + login + "\'");
+      //display user information
+      while(!valid){
+         System.out.println("-----------------------------------------");
+         System.out.println("Current user fields");
+         System.out.println("");
+
+         System.out.println("Login: "+ result.get(0).get(0));
+         System.out.println("Password: "+ result.get(0).get(1));
+         System.out.println("Role: "+ result.get(0).get(2));
+
+         System.out.println("Favorite Item: "+ result.get(0).get(3));
+         System.out.println("Phone Number: "+ result.get(0).get(4));
+
+         System.out.println("-----------------------------------------");
+         System.out.println("Which field would you like to change?");
+         System.out.println("1. Login");
+         System.out.println("2. Password");
+         System.out.println("3. Role");
+         System.out.println("4. Favorite Item");
+         System.out.println("5. Phone Number");
+         System.out.println("6. Return to Main Menu");
+         System.out.println("");
+         System.out.println("Desired field: ");
+         choice = in.readLine();
+
+         valid = true;
+         switch(choice){
+            case "1":
+               desiredField = "login";
+               break;
+            case "2":
+               desiredField = "password";
+               break;
+            case "3":
+               desiredField = "role";
+               break;
+            case "4":
+               desiredField = "favoriteItems";
+               break;
+            case "5":
+               desiredField = "phoneNum";
+               break;
+            case "6":
+               valid = true;
+               return;
+            default:
+               valid = false;
+               System.out.println("Please enter a valid choice.");
+               break;
+         }
+         //ask which field to change
+      }
+      System.out.println("-----------------------------------------");
+      System.out.println("What would you like to change this field to?");
+      System.out.println("");
+      System.out.print("Desired value: ");
+      newValue = in.readLine();
+
+      esql.executeUpdate("UPDATE Users SET " + desiredField + " = \'" + newValue + "\' WHERE login = " + "\'" + login + "\'");
+      System.out.println("-----------------------------------------");
+      System.out.println("Order status updated. Returning to main menu...");
+      //update accordingly
+      }catch(Exception e){System.out.println(e.getMessage());}
+   }
+
+   public static boolean isNumeric(String str) { //Helper function. Matches regex
+      return str.matches("-?\\d+(\\.\\d+)?");
+   }
 }//end PizzaStore
 
