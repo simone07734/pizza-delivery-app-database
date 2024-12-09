@@ -17,12 +17,14 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.io.File;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Random;
 import java.lang.Math;
 
 /**
@@ -251,7 +253,7 @@ public class PizzaStore {
          boolean keepon = true;
          while(keepon) {
             // These are sample SQL statements
-            System.out.println("MAIN MENU");
+            System.out.println("\nMAIN MENU");
             System.out.println("---------");
             System.out.println("1. Create user");
             System.out.println("2. Log in");
@@ -296,7 +298,7 @@ public class PizzaStore {
                    case 1: viewProfile(esql, authorisedUser); break;
                    case 2: updateProfile(esql, authorisedUser); break;
                    case 3: viewMenu(esql); break;
-                   case 4: placeOrder(esql); break;
+                   case 4: placeOrder(esql, authorisedUser); break;
                    case 5: viewAllOrders(esql); break;
                    case 6: viewRecentOrders(esql); break;
                    case 7: viewOrderInfo(esql); break;
@@ -505,7 +507,7 @@ public class PizzaStore {
 // Rest of the functions definition go in here
 
    public static void viewProfile(PizzaStore esql, String _login) {
-            BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
+      BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
       String login = "";
       String choice = "";
 
@@ -737,9 +739,149 @@ public class PizzaStore {
 
    }
 
-   public static void placeOrder(PizzaStore esql) {}
+   public static void placeOrder(PizzaStore esql, String _login) {
+      /* An order needs the following:
+         * orderID
+         * login
+         * storeID
+         * totalPrice
+         * timestamp
+         * status
+         * itemName of each item
+         * quantity of each item
+      */
+      boolean valid = false;
+      boolean distinctItem = true;
+      boolean doneOrdering = false;
+      int orderID = 0;
+      String storeID = "";
+      float totalPrice = 0.00f;
+      String status = "incomplete";
+      ArrayList<String> itemNames = new ArrayList<String>();
+      ArrayList<Integer> itemQuantities = new ArrayList<Integer>();
+      String newItem = "";
+      int newQuantity = 0;
+      int itemCount = 0;
+      
+   
+      // get the storeID and check for validity
+      System.out.println("-----------------------------------------");
+      System.out.print("Enter the storeID of the store you want to order from: ");
+      try{
+         storeID = in.readLine();
+         valid = esql.executeQuery("SELECT S.storeID FROM Store S WHERE S.storeID  = \'" + storeID + "\'") > 0;
+         if(!valid) {
+            System.out.println("That store does not exist or is not available. Returning to main menu.");
+            System.out.println("-----------------------------------------\n");
+            return;
+         }
+      }catch(Exception e){ System.out.println(e.getMessage()); }
+
+      while(!doneOrdering) {
+         // display current order and price
+         System.out.println("\n-----------------------------------------");
+         System.out.println("Current order: ");
+         for (int i = 0; i < itemCount; i++) {
+            System.out.println(itemQuantities.get(i) + " " + itemNames.get(i));
+         }
+         System.out.println("");
+         System.out.println("Order total: $" + totalPrice);
+         System.out.println("-----------------------------------------");
+         
+         // add item, place order, or cancel order
+         System.out.println("What would you like to do?");
+         System.out.println("1. Add item(s) to order");
+         System.out.println("2. Send order");
+         System.out.println("3. Cancel order");
+         System.out.println("");
+         
+         try{
+            switch(readChoice()) {
+               case 1:
+                  // get the itemName and check that it is offered
+                  valid = false;
+                  System.out.print("Item name: ");
+                  newItem = in.readLine();
+                  valid =  esql.executeQuery("SELECT T.itemName FROM Items T WHERE T.itemName  = \'" + newItem + "\'") > 0;
+                  if(!valid) {
+                     System.out.println("That item does not exist or is not available.");
+                     System.out.println("-----------------------------------------");
+                     break;
+                  }
+                  
+                  // get item quantity
+                  System.out.print("Quantity of " + newItem + ": ");
+                  newQuantity = Integer.parseInt(in.readLine());
+                  if(newQuantity < 1) {
+                     System.out.println("Invalid amount. You must order at least 1 of this to add it to your order.");
+                     break;
+                  }
+
+                  // if item of that name already is in the order, just add to it's quantity
+                  distinctItem = true;
+                  for (int i = 0; i < itemCount; i++) {
+                     if(itemNames.get(i).equals(newItem)) {
+                        itemQuantities.set(i, itemQuantities.get(i) + newQuantity);
+                        distinctItem = false;
+                     }
+                  }
+
+                  // add item and quantity to order, and update total price
+                  if (distinctItem) {
+                     itemNames.add(newItem);
+                     itemQuantities.add(newQuantity);
+                     itemCount++;
+                  }
+
+                  totalPrice += newQuantity * Float.parseFloat(esql.executeQueryAndReturnResult("SELECT T.price "
+                                 + "FROM Items T WHERE T.itemName  = \'" + newItem + "\'").get(0).get(0));
+                  break;
+               case 2:
+                  doneOrdering = true;
+                  break;
+               case 3:
+                  System.out.println("Are you sure you want to cancel your order? (y/n)");
+                  if(in.readLine().equals("y")) { return; }
+                  break;
+               default:
+                  System.out.println("Please try again.");
+                  break;
+            }
+         }catch(Exception e){ System.out.println(e.getMessage()); }
+      }
+
+      try{
+         // generate a unique order id
+         Random rand = new Random();
+         valid = false;
+         while(!valid) {
+            orderID = rand.nextInt(2000000000);
+            valid = esql.executeQuery("SELECT R.orderID FROM FoodOrder R WHERE R.orderID  = \'" + orderID + "\'") == 0;
+         }
+
+         // generate timestamp
+         long now = System.currentTimeMillis();
+         Timestamp orderTimestamp = new Timestamp(now);
+
+         // insert order into FoodOrder
+         esql.executeUpdate("INSERT INTO FoodOrder VALUES (" + "\'" + orderID + "\', \'" + _login + "\', \'" + storeID
+            + "\', \'" + totalPrice + "\', \'" + orderTimestamp + "\', \'incomplete')");
+
+         // insert into ItemsIn Order each item with correct order id
+         for (int i = 0; i < itemCount; i++) {
+            esql.executeUpdate("INSERT INTO ItemsInOrder VALUES (" + "\'" + orderID + "\', \'" + itemNames.get(i) + "\', \'" + itemQuantities.get(i)+ "\')");
+         }  
+      }catch(Exception e){ System.out.println(e.getMessage()); }
+
+      // helpful message about the order being placed
+      System.out.println("\nWe received your order!\n");
+
+   }
+
    public static void viewAllOrders(PizzaStore esql) {}
+
    public static void viewRecentOrders(PizzaStore esql) {}
+
    public static void viewOrderInfo(PizzaStore esql) {}
 
 
@@ -836,7 +978,9 @@ public class PizzaStore {
 
       //update
    }
+
    public static void updateMenu(PizzaStore esql) {}
+
    public static void updateUser(PizzaStore esql) {
       
       String login = "";
