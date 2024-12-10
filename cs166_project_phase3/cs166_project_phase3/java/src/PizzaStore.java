@@ -790,7 +790,7 @@ public class PizzaStore {
 
       while(!doneOrdering) {
          // display current order and price
-         System.out.println("\n-----------------------------------------");
+         
          System.out.println("Current order: ");
          for (int i = 0; i < itemCount; i++) {
             System.out.println(itemQuantities.get(i) + " " + itemNames.get(i));
@@ -855,7 +855,7 @@ public class PizzaStore {
                   if(in.readLine().equals("y")) { return; }
                   break;
                default:
-                  System.out.println("Please try again.");
+                  System.out.println("Not an option. Please try again.");
                   break;
             }
          }catch(Exception e){ System.out.println(e.getMessage()); }
@@ -1060,6 +1060,94 @@ public class PizzaStore {
    }
 
    public static void updateMenu(PizzaStore esql) {
+      System.out.println("\n-----------------------------------------");
+      System.out.println("What would you like to do?");
+      System.out.println("1. Update item information");
+      System.out.println("2. Add new item");
+      System.out.println("3. Go back to main menu");
+      System.out.println("");
+
+      try{
+         switch(readChoice()) {
+            case 1:
+               updateItem(esql);
+               break;
+            case 2:
+               addItem(esql);
+               break;
+            case 3: return;
+            default:
+               System.out.println("Not an option. Returning to main menu.");
+               return;
+         }
+      }catch(Exception e){System.out.println(e.getMessage());}
+   }
+
+   public static void updateItem(PizzaStore esql) {
+      String itemName = "";
+      String fieldName = "";
+      String fieldContent = "";
+      List<List<String>> queryResults = new ArrayList<>();
+      String matchNameQuery = "SELECT T.itemName FROM Items T WHERE T.itemName = \'";
+      String updateStatement = "UPDATE Items SET ";
+
+      // find the item
+      System.out.print("Name of item to update: ");
+      try { 
+         itemName = in.readLine();
+         matchNameQuery += itemName;
+         matchNameQuery += "\'";
+         queryResults = esql.executeQueryAndReturnResult(matchNameQuery);
+      }catch(Exception e){System.out.println(e.getMessage());}
+      if (queryResults.size() == 0) { System.out.println("Sorry, that item does not exist."); return; }
+
+      // pick the field
+      System.out.println("Pick a field to edit:");
+      System.out.println("1. Ingredients");
+      System.out.println("2. Type");
+      System.out.println("3. Price");
+      System.out.println("4. Description");
+      System.out.println("5. Exit");
+      System.out.println("");
+
+      switch(readChoice()) {
+         case 1:
+            updateStatement += "ingredients ";
+            fieldName = "ingredients";
+            break;
+         case 2:
+            updateStatement += "typeOfItem ";
+            fieldName ="typeOfItem";
+            break;
+         case 3:
+            updateStatement += "price ";
+            fieldName = "price";
+            break;
+         case 4:
+            updateStatement += "description ";
+            fieldName = "description";
+            break;
+         case 5: return;
+         default:
+            System.out.println("Not an option. Returning to main menu.");
+            return;
+      }
+
+      // enter the updated information
+      updateStatement += " = \'";
+      System.out.print("New value for " + fieldName + ": ");
+      try { fieldContent = in.readLine(); }
+      catch(Exception e){System.out.println(e.getMessage());}
+      updateStatement += (fieldContent + "\' WHERE itemName = \'" + itemName + "\'");
+
+      System.out.println(updateStatement);
+
+      // update database
+      try { esql.executeUpdate(updateStatement); }
+      catch(Exception e){System.out.println(e.getMessage());}
+   }
+
+   public static void addItem(PizzaStore esql) {
       // TODO
    }
 
