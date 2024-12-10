@@ -202,12 +202,12 @@ public class PizzaStore {
     * @throws java.sql.SQLException when failed to execute the query
     */
    public int getCurrSeqVal(String sequence) throws SQLException {
-	Statement stmt = this._connection.createStatement ();
+      Statement stmt = this._connection.createStatement ();
 
-	ResultSet rs = stmt.executeQuery (String.format("Select currval('%s')", sequence));
-	if (rs.next())
-		return rs.getInt(1);
-	return -1;
+      ResultSet rs = stmt.executeQuery (String.format("Select currval('%s')", sequence));
+      if (rs.next())
+         return rs.getInt(1);
+      return -1;
    }
 
    /**
@@ -253,18 +253,21 @@ public class PizzaStore {
          boolean keepon = true;
          while(keepon) {
             // These are sample SQL statements
-            System.out.println("\nMAIN MENU");
+            System.out.println("");
+            System.out.println("MAIN MENU");
             System.out.println("---------");
             System.out.println("1. Create user");
             System.out.println("2. Log in");
             System.out.println("9. < EXIT");
             String authorisedUser = null;
+            String userRole = null;
             List<String> userInfo = new ArrayList<>();
             switch (readChoice()){
                case 1: CreateUser(esql); break;
                case 2: 
                   userInfo = LogIn(esql);
                   authorisedUser = userInfo.get(0); 
+                  userRole = userInfo.get(1);
                   break;
                case 9: keepon = false; break;
                default : System.out.println("Unrecognized choice!"); break;
@@ -284,11 +287,15 @@ public class PizzaStore {
                 System.out.println("8. View Stores"); 
 
                 //**the following functionalities should only be able to be used by drivers & managers**
-                System.out.println("9. Update Order Status");
+                if (userRole.contains("manager") || userRole.contains("driver")) {
+                  System.out.println("9. Update Order Status");
+                }
 
                 //**the following functionalities should ony be able to be used by managers**
-                System.out.println("10. Update Menu");
-                System.out.println("11. Update User");
+                if (userRole.contains("manager")) {
+                  System.out.println("10. Update Menu");
+                  System.out.println("11. Update User");
+                }
 
                 System.out.println(".........................");
                 System.out.println("20. Log out");
@@ -299,20 +306,25 @@ public class PizzaStore {
                    case 2: updateProfile(esql, authorisedUser); break;
                    case 3: viewMenu(esql); break;
                    case 4: placeOrder(esql, authorisedUser); break;
-                   case 5: viewAllOrders(esql); break;
-                   case 6: viewRecentOrders(esql); break;
-                   case 7: viewOrderInfo(esql); break;
+                   case 5: viewAllOrders(esql, authorisedUser, userRole); break;
+                   case 6: viewRecentOrders(esql, authorisedUser, userRole); break;
+                   case 7: viewOrderInfo(esql, authorisedUser, userRole); break;
                    case 8: viewStores(esql); break;
                    case 9: 
-                     System.out.println("_"+userInfo.get(1)+"_"); 
-                     if(userInfo.get(1).contains("manager") || (userInfo.get(1).contains("driver"))){
+                     if(userRole.contains("manager") || (userRole.contains("driver"))){
                         updateOrderStatus(esql);
                      }
+                     else System.out.println("Unrecognized choice!");
                      break;
-                   case 10: if(userInfo.get(1).contains("manager")) updateMenu(esql); break;
-                   case 11: if(userInfo.get(1).contains("manager")) updateUser(esql); break;
+                   case 10: 
+                     if(userRole.contains("manager")) updateMenu(esql); 
+                     else System.out.println("Unrecognized choice!");
+                     break;
 
-
+                   case 11:
+                     if(userRole.contains("manager")) updateUser(esql);
+                     else System.out.println("Unrecognized choice!");
+                     break;
 
                    case 20: usermenu = false; break;
                    default : System.out.println("Unrecognized choice!"); break;
@@ -557,7 +569,6 @@ public class PizzaStore {
       //update accordingly
       }catch(Exception e){System.out.println(e.getMessage());}
    }
-
 
    public static void updateProfile(PizzaStore esql, String _login) {
       BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
@@ -878,12 +889,87 @@ public class PizzaStore {
 
    }
 
-   public static void viewAllOrders(PizzaStore esql) {}
+   public static void viewAllOrders(PizzaStore esql, String _login, String _role) {
+      String orderQuery = "SELECT R.orderID FROM FoodOrder R ";
+      
+      System.out.println("-----------------------------------------");
+      if(_role.contains("manager") || _role.contains("driver")) {
+         orderQuery += " ORDER BY R.orderTimestamp DESC";
+         System.out.println("All orders from most recent to least recent");
+         try{
+         esql.executeQueryAndPrintResult(orderQuery);
+         }catch(Exception e){System.out.println(e.getMessage());}
+      }
+      else {
+         orderQuery += "WHERE R.login = \'" + _login + "\' ORDER BY R.orderTimestamp DESC";
+         System.out.println("Your order history from most recent to least recent");
+         try{
+         esql.executeQueryAndPrintResult(orderQuery);
+         }catch(Exception e){System.out.println(e.getMessage());}
+      }
+      System.out.println("-----------------------------------------");
+   }
 
-   public static void viewRecentOrders(PizzaStore esql) {}
+   public static void viewRecentOrders(PizzaStore esql, String _login, String _role) {
+      String orderQuery = "SELECT R.orderID FROM FoodOrder R ";
+      
+      System.out.println("-----------------------------------------");
+      if(_role.contains("manager") || _role.contains("driver")) {
+         orderQuery += " ORDER BY R.orderTimestamp DESC LIMIT 5";
+         System.out.println("Five most recent orders");
+         try{
+         esql.executeQueryAndPrintResult(orderQuery);
+         }catch(Exception e){System.out.println(e.getMessage());}
+      }
+      else {
+         orderQuery += "WHERE R.login = \'" + _login + "\' ORDER BY R.orderTimestamp DESC LIMIT 5";
+         System.out.println("Your five most recent orders");
+         try{
+         esql.executeQueryAndPrintResult(orderQuery);
+         }catch(Exception e){System.out.println(e.getMessage());}
+      }
+      System.out.println("-----------------------------------------");
+   }
 
-   public static void viewOrderInfo(PizzaStore esql) {}
+   public static void viewOrderInfo(PizzaStore esql, String _login, String _role) {
+      /* They should be able to see their orderTimestamp, totalPrice, orderStatus, and list of
+      items in that order (along with the quantity). */
+      String orderID = "";
+      int valid = 0;
+      String orderQuery = "SELECT R.orderTimestamp, R.totalPrice, R.orderstatus FROM FoodOrder R WHERE R.orderID = \'";
+      String orderItemsQuery = "SELECT N.itemName, N.quantity FROM ItemsInOrder N WHERE N.orderID = \'";
+      
+      // get orderID
+      System.out.println("-----------------------------------------");
+      System.out.println("Enter orderID: ");
+      try{ orderID = in.readLine(); }
+      catch(Exception e){ System.out.println(e.getMessage()); }
+      orderQuery += orderID;
+      orderQuery += "\'";
+      
+      // customers can only see their own orders
+      if(!_role.contains("manager") && !_role.contains("driver")) {
+         orderQuery += " AND login = \'" + _login + "\'";
+      }
 
+      // print order
+      System.out.println("");
+      try{ valid = esql.executeQueryAndPrintResult(orderQuery); }
+      catch(Exception e){ System.out.println(e.getMessage()); }
+      if(valid <= 0) {
+         System.out.println("no orders with that ID available");
+         System.out.println("-----------------------------------------");
+         return;
+      }
+      System.out.println("");
+
+      // print the items in the order
+      orderItemsQuery += orderID;
+      orderItemsQuery += "\'";
+      try { esql.executeQueryAndPrintResult(orderItemsQuery); }
+      catch(Exception e){ System.out.println(e.getMessage()); }
+      System.out.println("-----------------------------------------");
+   }
 
    public static void viewStores(PizzaStore esql) {
       BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
@@ -916,7 +1002,6 @@ public class PizzaStore {
          
       }
    }
-
 
    public static void updateOrderStatus(PizzaStore esql) {
       BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
@@ -972,14 +1057,11 @@ public class PizzaStore {
          
 
       }catch(Exception e){System.out.println(e.getMessage());}
-      //find
-      
-      //enter status
-
-      //update
    }
 
-   public static void updateMenu(PizzaStore esql) {}
+   public static void updateMenu(PizzaStore esql) {
+      // TODO
+   }
 
    public static void updateUser(PizzaStore esql) {
       
