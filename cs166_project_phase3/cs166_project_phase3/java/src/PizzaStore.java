@@ -12,6 +12,8 @@
 
 
 import java.sql.DriverManager;
+import java.text.DecimalFormat;
+import java.math.RoundingMode;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
@@ -479,18 +481,21 @@ public class PizzaStore {
       BufferedReader consoleInput = new BufferedReader(new InputStreamReader(System.in));
 
       try{
-         System.out.print("Please enter login: ");
-         String login = consoleInput.readLine();
-         queryResults = esql.executeQueryAndReturnResult("SELECT * FROM Users F WHERE F.login = \'" + login + "\'");
-         System.out.println("-----------------------------------------");
-
-         if(queryResults.size() == 0){
-            System.out.println("No user, returning to main menu.");
-            return null;
-         }
+         String login = "";
          boolean valid = false;
 
          while(!valid){
+            System.out.print("Please enter login: ");
+            login = consoleInput.readLine();
+            queryResults = esql.executeQueryAndReturnResult("SELECT * FROM Users F WHERE F.login = \'" + login + "\'");
+            System.out.println("-----------------------------------------");
+            valid = queryResults.size() > 0;
+            if(!valid){
+               System.out.println("No user, please try again.");
+               continue;
+               //return null;
+            }
+
             System.out.print("Please enter password: ");
             String password = consoleInput.readLine();
             System.out.println("-----------------------------------------");
@@ -762,6 +767,9 @@ public class PizzaStore {
          * itemName of each item
          * quantity of each item
       */
+     DecimalFormat df = new DecimalFormat("##.##");
+      df.setRoundingMode(RoundingMode.DOWN); 
+
       boolean valid = false;
       boolean distinctItem = true;
       boolean doneOrdering = false;
@@ -797,7 +805,7 @@ public class PizzaStore {
             System.out.println(itemQuantities.get(i) + " " + itemNames.get(i));
          }
          System.out.println("");
-         System.out.println("Order total: $" + totalPrice);
+         System.out.println("Order total: $" + df.format(totalPrice));
          System.out.println("-----------------------------------------");
          
          // add item, place order, or cancel order
