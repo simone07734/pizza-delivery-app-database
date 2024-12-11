@@ -725,7 +725,7 @@ public class PizzaStore {
                   boolean valid = false;
                   while(!valid){
                      System.out.println("-----------------------------------------");
-                     System.out.print("Please enter a maximum price: ");
+                     System.out.print("Please enter a maximum price (integer only): ");
                      input = consoleInput.readLine();
                      valid = isNumeric(input);
                      if(!valid) System.out.println("Please enter a valid price.");
@@ -799,7 +799,7 @@ public class PizzaStore {
 
       while(!doneOrdering) {
          // display current order and price
-         
+         System.out.println("");
          System.out.println("Current order: ");
          for (int i = 0; i < itemCount; i++) {
             System.out.println(itemQuantities.get(i) + " " + itemNames.get(i));
@@ -1159,7 +1159,7 @@ public class PizzaStore {
       String fieldContent = "";
       List<List<String>> queryResults = new ArrayList<>();
       String matchNameQuery = "SELECT T.itemName FROM Items T WHERE T.itemName = \'";
-      String insertQuery = "INSERT Into Items VALUES (\'";
+      String insertStatement = "INSERT Into Items VALUES (\'";
 
       // find the item
       System.out.print("What is the name of the new item?: ");
@@ -1172,24 +1172,22 @@ public class PizzaStore {
       if (queryResults.size() > 0) { System.out.println("An item with that name already exists."); return; }
 
       // get attributes of item
-      insertQuery += (itemName + "\', \'");
+      insertStatement += (itemName + "\', \'");
       System.out.println("Enter the attributes of " + itemName);
       try{
       System.out.print("Ingredients: ");
-      insertQuery += (in.readLine() + "\', \'");
+      insertStatement += (in.readLine() + "\', \'");
       System.out.print("Type: ");
-      insertQuery += (in.readLine() + "\', \'");
+      insertStatement += (in.readLine() + "\', \'");
       System.out.print("Price in dollars: $");
-      insertQuery += (in.readLine() + "\', \'");
+      insertStatement += (in.readLine() + "\', \'");
       System.out.print("Description: ");
-      insertQuery += (in.readLine() + "\')");
+      insertStatement += (in.readLine() + "\')");
       System.out.println("");
       }catch(Exception e){System.out.println(e.getMessage());}
 
-      System.out.println(insertQuery);
-
       // insert item into database
-      try { esql.executeUpdate(insertQuery); }
+      try { esql.executeUpdate(insertStatement); }
       catch(Exception e){System.out.println(e.getMessage());}
    }
 
