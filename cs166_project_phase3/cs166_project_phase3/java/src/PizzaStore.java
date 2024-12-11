@@ -657,7 +657,7 @@ public class PizzaStore {
          try{
             List<List<String>> items = new ArrayList<>();
             String query = "SELECT * FROM Items F WHERE F.price < " + maxPrice;
-            if(filterByType) query += " AND F.typeOfItem = \' " + type + "\'";
+            if(filterByType) query += " AND F.typeOfItem LIKE \'%" + type + "\'"; // account for a possible leading space
 
             if(sort != -1) query += " ORDER BY F.price";
             if(sort == 1) query += " DESC";
@@ -699,13 +699,14 @@ public class PizzaStore {
                   String input = "";
                   boolean valid = false;
 
-                  while(!valid){
+                  //while(!valid){
                      System.out.println("-----------------------------------------");
-                     System.out.print("Please enter an item type. Valid selections are 'entree' 'drinks' or 'sides': ");
+                     // System.out.print("Please enter an item type. Valid selections are 'entree' 'drinks' or 'sides': ");
+                     System.out.print("Please enter an item type. ('entree,' 'drinks,' 'sides,' etc): ");
                      input = consoleInput.readLine();
-                     valid = input.equals("entree") || input.equals("drinks") || input.equals("sides");
-                     if(!valid) System.out.println("Please enter a valid item type.");
-                  }
+                     // valid = input.equals("entree") || input.equals("drinks") || input.equals("sides");
+                     // if(!valid) System.out.println("Please enter a valid item type.");
+                  //}
                   filterByType = true;
                   type = input;
                }catch(Exception e){}
@@ -1140,15 +1141,48 @@ public class PizzaStore {
       catch(Exception e){System.out.println(e.getMessage());}
       updateStatement += (fieldContent + "\' WHERE itemName = \'" + itemName + "\'");
 
-      System.out.println(updateStatement);
-
       // update database
       try { esql.executeUpdate(updateStatement); }
       catch(Exception e){System.out.println(e.getMessage());}
    }
 
    public static void addItem(PizzaStore esql) {
-      // TODO
+      String itemName = "";
+      String fieldContent = "";
+      List<List<String>> queryResults = new ArrayList<>();
+      String matchNameQuery = "SELECT T.itemName FROM Items T WHERE T.itemName = \'";
+      String insertQuery = "INSERT Into Items VALUES (\'";
+
+      // find the item
+      System.out.print("What is the name of the new item?: ");
+      try { 
+         itemName = in.readLine();
+         matchNameQuery += itemName;
+         matchNameQuery += "\'";
+         queryResults = esql.executeQueryAndReturnResult(matchNameQuery);
+      }catch(Exception e){System.out.println(e.getMessage());}
+      if (queryResults.size() > 0) { System.out.println("An item with that name already exists."); return; }
+
+      // get attributes of item
+      insertQuery += (itemName + "\', \'");
+      System.out.println("Enter the attributes of " + itemName);
+      try{
+      System.out.print("Ingredients: ");
+      insertQuery += (in.readLine() + "\', \'");
+      System.out.print("Type: ");
+      insertQuery += (in.readLine() + "\', \'");
+      System.out.print("Price in dollars: $");
+      insertQuery += (in.readLine() + "\', \'");
+      System.out.print("Description: ");
+      insertQuery += (in.readLine() + "\')");
+      System.out.println("");
+      }catch(Exception e){System.out.println(e.getMessage());}
+
+      System.out.println(insertQuery);
+
+      // insert item into database
+      try { esql.executeUpdate(insertQuery); }
+      catch(Exception e){System.out.println(e.getMessage());}
    }
 
    public static void updateUser(PizzaStore esql) {
